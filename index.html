@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ GOOGLE ANALYTICS (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4CWFSYTWY7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4CWFSYTWY7');
+    </script>
+
+    <!-- ✅ PRIMARY SEO TAGS -->
+    <title>ImgJetX - Free Online Image Editor, Compressor & Converter | Resize, Crop, Convert to PDF</title>
+    <meta name="description" content="ImgJetX is a free online image editor. Compress, resize, crop, rotate and convert images to JPG, PNG, WEBP, PDF & AVIF. No upload needed. Works in browser. Fast & free for India and worldwide.">
+    <meta name="keywords" content="free image compressor, online image editor, resize image online, compress image, image to PDF, crop image online, image converter, photo compressor, image size reducer, compress image without losing quality, free photo editor India, image compressor India, image resize tool, bulk image compressor, batch image editor, convert image to webp, jpg to pdf, png compressor, image optimizer, photo resize online">
+    <meta name="author" content="ImgJetX">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="rating" content="general">
+    <meta name="revisit-after" content="7 days">
+    <meta name="language" content="English, Hindi">
+    <meta name="geo.region" content="IN">
+    <meta name="geo.placename" content="India">
+    <link rel="canonical" href="https://imgjetx.site/">
+
+    <!-- ✅ OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imgjetx.site/">
+    <meta property="og:title" content="ImgJetX - Free Image Compressor, Resizer & Converter Online">
+    <meta property="og:description" content="Compress, resize, crop & convert images for free. Supports JPG, PNG, WEBP, PDF, AVIF. No signup. Works instantly in browser. Best free image tool for India.">
+    <meta property="og:image" content="https://imgjetx.site/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ImgJetX - Free Online Image Editor">
+    <meta property="og:site_name" content="ImgJetX">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="hi_IN">
+
+    <!-- ✅ TWITTER / X CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://imgjetx.site/">
+    <meta name="twitter:title" content="ImgJetX - Free Image Compressor & Editor Online">
+    <meta name="twitter:description" content="Compress, resize, crop & convert images free. JPG, PNG, WEBP, PDF, AVIF. No upload. Works in browser. Fast & free!">
+    <meta name="twitter:image" content="https://imgjetx.site/og-image.jpg">
+    <meta name="twitter:image:alt" content="ImgJetX Free Image Editor">
+    <meta name="twitter:site" content="@imgjetx">
+    <meta name="twitter:creator" content="@imgjetx">
+
+    <!-- ✅ SCHEMA.ORG STRUCTURED DATA (Google Rich Results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "ImgJetX",
+      "url": "https://imgjetx.site/",
+      "description": "Free online image editor to compress, resize, crop, rotate and convert images to JPG, PNG, WEBP, PDF and AVIF. No signup required.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any (Browser-based)",
+      "browserRequirements": "Requires JavaScript. Works on Chrome, Firefox, Safari, Edge.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "featureList": [
+        "Image Compression",
+        "Image Resize",
+        "Image Crop",
+        "Image Rotate & Flip",
+        "Convert to PDF",
+        "Convert to WEBP",
+        "Convert to AVIF",
+        "Batch Processing up to 10 images",
+        "JetImage HDR Enhancer",
+        "No upload to server - 100% browser-based"
+      ],
+      "inLanguage": ["en", "hi"],
+      "availableLanguage": ["English", "Hindi"],
+      "isAccessibleForFree": true,
+      "creator": {
+        "@type": "Organization",
+        "name": "ImgJetX"
+      }
+    }
+    </script>
+
+    <!-- ✅ INDIA SPECIFIC / HINDI AUDIENCE -->
+    <meta name="google" content="notranslate">
+    <meta http-equiv="content-language" content="en-in">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Nunito', 'sans-serif'] },
+                    colors: {
+                        neu: { light: '#e0e5ec', dark: '#1e293b' },
+                        accent: { DEFAULT: '#3b82f6', hover: '#2563eb' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <style>
+        :root{--bg-color:#e0e5ec;--text-color:#334155;--shadow-outer:9px 9px 16px #a3b1c6,-9px -9px 16px #ffffff;--shadow-inner:inset 6px 6px 12px #a3b1c6,inset -6px -6px 12px #ffffff;--input-inner:inset 4px 4px 8px #a3b1c6,inset -4px -4px 8px #ffffff;--accent-shadow:5px 5px 10px #a3b1c6,-5px -5px 10px #ffffff;--accent-inner:inset 5px 5px 10px #2563eb,inset -5px -5px 10px #60a5fa;--bg-output:#d8dee6}
+        html.dark{--bg-color:#1e293b;--text-color:#f8fafc;--shadow-outer:7px 7px 14px #121824,-7px -7px 14px #2a3a52;--shadow-inner:inset 6px 6px 12px #121824,inset -6px -6px 12px #2a3a52;--input-inner:inset 4px 4px 8px #121824,inset -4px -4px 8px #2a3a52;--accent-shadow:5px 5px 10px #121824,-5px -5px 10px #2a3a52;--accent-inner:inset 5px 5px 10px #1e40af,inset -5px -5px 10px #3b82f6;--bg-output:#192231}
+        body{background-color:var(--bg-color);color:var(--text-color);transition:background-color .3s ease,color .3s ease}
+        .neu-box{background-color:var(--bg-color);box-shadow:var(--shadow-outer);border-radius:1.25rem}
+        .neu-box-output{background-color:var(--bg-output);box-shadow:var(--shadow-outer);border-radius:1.25rem;transition:background-color .3s ease}
+        .neu-pressed{background-color:var(--bg-color);box-shadow:var(--shadow-inner);border-radius:1.25rem}
+        .neu-btn{background-color:var(--bg-color);box-shadow:var(--shadow-outer);transition:all .2s ease-in-out}
+        .neu-btn.active,.neu-btn:active{box-shadow:var(--shadow-inner)}
+        .neu-btn-accent{background-color:#3b82f6;color:#fff;box-shadow:var(--accent-shadow);transition:all .2s ease-in-out}
+        .neu-btn-accent:active:not(:disabled){box-shadow:var(--accent-inner)}
+        .neu-btn-accent:disabled{opacity:.8;cursor:not-allowed}
+        .neu-input{background-color:var(--bg-color);color:var(--text-color);box-shadow:var(--input-inner);border:none;outline:none}
+        .segmented-control input[type=radio]{display:none}
+        .segmented-control label{cursor:pointer;transition:all .2s ease;box-shadow:var(--shadow-outer);background-color:var(--bg-color)}
+        .segmented-control input[type=radio]:checked+label{box-shadow:var(--shadow-inner);color:#3b82f6}
+        .hide-scrollbar::-webkit-scrollbar{height:6px}
+        .hide-scrollbar::-webkit-scrollbar-track{background:0 0}
+        .hide-scrollbar::-webkit-scrollbar-thumb{background:#3b82f6;border-radius:10px}
+        ::-webkit-scrollbar{width:8px;height:8px}
+        ::-webkit-scrollbar-track{background:var(--bg-color);box-shadow:var(--input-inner);border-radius:10px}
+        ::-webkit-scrollbar-thumb{background:#3b82f6;border-radius:10px}
+        .cropper-face,.cropper-view-box{border-radius:4px}
+    </style>
+</head>
+<body class="min-h-screen pb-12 font-sans tracking-wide flex flex-col">
+
+    <!-- Top Navigation -->
+    <nav class="w-full p-6 flex justify-between items-center max-w-[1600px] mx-auto">
+        <div class="flex items-center gap-3">
+            <div class="neu-box w-12 h-12 flex items-center justify-center text-accent text-2xl">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h1 class="text-2xl font-extrabold tracking-wide">ImgJetX</h1>
+        </div>
+        <button id="themeToggle" onclick="toggleTheme()" class="neu-btn w-12 h-12 rounded-full flex items-center justify-center text-xl">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- UPPER WORKSPACE -->
+    <main class="grid grid-cols-1 lg:grid-cols-12 gap-10 p-6 max-w-[1600px] mx-auto w-full relative z-10">
+        
+        <!-- LEFT PANEL -->
+        <div class="lg:col-span-8 flex flex-col gap-8 relative" id="workspaceContainer">
+            
+            <label id="dropZone" ondragover="event.preventDefault(); this.classList.add('border-blue-500','scale-[1.01]')" ondragleave="this.classList.remove('border-blue-500','scale-[1.01]')" ondrop="event.preventDefault(); this.classList.remove('border-blue-500','scale-[1.01]'); handleFiles(event.dataTransfer.files)" for="fileInput" class="neu-pressed border-2 border-dashed border-blue-400 p-12 flex flex-col items-center justify-center cursor-pointer transition-all hover:border-blue-500 group relative min-h-[500px]">
+                <input type="file" id="fileInput" multiple accept="image/*" class="hidden" onchange="ingestFiles(this)">
+                <div class="neu-box w-20 h-20 rounded-full flex items-center justify-center mb-6 text-blue-500 text-3xl group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+                <h2 class="text-2xl font-extrabold mb-2 text-center">Drag & Drop Images Here</h2>
+                <p class="text-sm opacity-70 text-center">Supports JPG, PNG, WEBP, HEIC (Max 10 Images)</p>
+            </label>
+
+            <div id="activeWorkspace" class="hidden flex-col gap-6 w-full">
+                <div class="flex justify-between items-center px-2">
+                    <h3 class="text-xl font-extrabold">Batch Queue (<span id="queueCount">0</span>/10)</h3>
+                    <button id="clearQueueBtn" onclick="clearQueue()" class="neu-btn px-4 py-2 rounded-lg text-red-500 font-bold text-sm hover:scale-[1.02] active:scale-95 transition-transform">
+                        <i class="fa-solid fa-trash-can mr-2"></i>Clear Queue
+                    </button>
+                </div>
+                
+                <div class="neu-box relative p-4 border-[2px] border-blue-500/40 shadow-[0_0_20px_rgba(59,130,246,0.15)] rounded-[1.5rem] flex flex-col items-center justify-center min-h-[400px] md:min-h-[500px] bg-black/5 dark:bg-black/20">
+                    
+                    <div id="upperCounter" class="absolute left-4 top-4 z-20 neu-pressed px-4 py-1.5 rounded-full text-blue-500 font-extrabold text-sm shadow-sm hidden">1 / 5</div>
+
+                    <div class="absolute right-4 top-4 z-20">
+                        <button id="infoToggleBtn" onclick="event.stopPropagation(); document.getElementById('metaPopup').classList.toggle('hidden')" class="w-9 h-9 rounded-full neu-btn flex items-center justify-center hover:text-blue-500 transition-colors">
+                            <i class="fa-solid fa-info text-sm font-bold"></i>
+                        </button>
+                        <div id="metaPopup" class="hidden absolute top-12 right-0 neu-box p-5 w-64 text-sm z-[100] flex flex-col gap-3 shadow-xl">
+                            <div class="font-extrabold border-b border-gray-500/20 pb-2 mb-1 truncate text-[15px] text-blue-500" id="metaName">Filename</div>
+                            <div class="flex justify-between"><span>Format:</span> <strong id="metaFormat">PNG</strong></div>
+                            <div class="flex justify-between"><span>Dimensions:</span> <strong id="metaSize">1024x768 px</strong></div>
+                            <div class="flex justify-between"><span>File Size:</span> <strong id="metaWeight">1.2 MB</strong></div>
+                        </div>
+                    </div>
+
+                    <label class="absolute -right-5 top-1/2 -translate-y-1/2 w-10 h-10 neu-btn-accent rounded-full flex items-center justify-center z-30 cursor-pointer shadow-lg hover:scale-110 transition-transform border-[3px] border-[var(--bg-color)] hidden md:flex" id="edgeFileBtnContainer">
+                        <input type="file" multiple accept="image/*" class="hidden" onchange="ingestFiles(this)">
+                        <i class="fa-solid fa-plus text-sm"></i>
+                    </label>
+
+                    <div class="flex-1 w-full flex items-center justify-center rounded-xl p-2 relative" id="activePreviewWrapper">
+                        <button id="prevImgBtn" onclick="navigateActiveImage(-1)" class="absolute left-1 md:left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full neu-btn flex items-center justify-center z-20 hover:text-blue-500 transition-all opacity-80 hover:opacity-100 hidden shadow-lg">
+                            <i class="fa-solid fa-chevron-left text-sm md:text-lg font-bold"></i>
+                        </button>
+                        <button id="nextImgBtn" onclick="navigateActiveImage(1)" class="absolute right-1 md:right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full neu-btn flex items-center justify-center z-20 hover:text-blue-500 transition-all opacity-80 hover:opacity-100 hidden shadow-lg">
+                            <i class="fa-solid fa-chevron-right text-sm md:text-lg font-bold"></i>
+                        </button>
+
+                        <img id="activePreviewImg" src="" alt="Preview" class="max-h-[380px] md:max-h-[480px] max-w-full object-contain drop-shadow-xl transition-all duration-300">
+                    </div>
+                </div>
+
+                <div class="flex justify-center gap-4 md:gap-6 mt-2 flex-wrap">
+                    <button onclick="openActiveCrop()" class="neu-btn w-16 h-16 md:w-20 md:h-20 rounded-[1.25rem] flex flex-col items-center justify-center gap-1 md:gap-2 hover:text-blue-500 active:scale-95 transition-all">
+                        <i class="fa-solid fa-crop-simple text-[18px] md:text-[22px]"></i>
+                        <span class="text-[10px] md:text-[11px] font-extrabold uppercase tracking-wider">Crop</span>
+                    </button>
+
+                    <button onclick="openRotateModal()" class="neu-btn w-16 h-16 md:w-20 md:h-20 rounded-[1.25rem] flex flex-col items-center justify-center gap-1 md:gap-2 hover:text-blue-500 active:scale-95 transition-all">
+                        <i class="fa-solid fa-rotate text-[18px] md:text-[22px]"></i>
+                        <span class="text-[10px] md:text-[11px] font-extrabold uppercase tracking-wider">Rotate</span>
+                    </button>
+
+                    <button onclick="removeImage(activeId)" class="neu-btn w-16 h-16 md:w-20 md:h-20 rounded-[1.25rem] flex flex-col items-center justify-center gap-1 md:gap-2 text-red-500 hover:text-red-600 active:scale-95 transition-all">
+                        <i class="fa-solid fa-trash-can text-[18px] md:text-[22px]"></i>
+                        <span class="text-[10px] md:text-[11px] font-extrabold uppercase tracking-wider">Delete</span>
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-4 overflow-x-auto p-5 neu-box hide-scrollbar mt-2 rounded-2xl" id="miniGalleryStrip"></div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL: Settings -->
+        <div class="lg:col-span-4 relative">
+            <div id="globalPanel" class="neu-box p-8 flex flex-col gap-8 sticky top-8 opacity-40 pointer-events-none transition-opacity duration-300 z-10">
+                <h3 class="text-2xl font-extrabold border-b border-gray-400/20 pb-4">
+                    <i class="fa-solid fa-sliders text-blue-500 mr-2"></i>Global Settings
+                </h3>
+
+                <div class="flex flex-col gap-4">
+                    <label class="font-bold text-sm uppercase opacity-80">Re-Size Scaling Mode</label>
+                    <div class="flex gap-4 segmented-control">
+                        <input type="radio" name="resizeMode" id="modePixels" value="pixel" checked onchange="toggleResizeMode(this.value); resetProcessBtn();">
+                        <label for="modePixels" class="flex-1 text-center py-3 rounded-xl font-bold">By Pixels</label>
+                        
+                        <input type="radio" name="resizeMode" id="modePercent" value="percent" onchange="toggleResizeMode(this.value); resetProcessBtn();">
+                        <label for="modePercent" class="flex-1 text-center py-3 rounded-xl font-bold">By Percent</label>
+                    </div>
+
+                    <div id="pixelInputs" class="flex gap-4 mt-2">
+                        <div class="flex-1 flex flex-col gap-2">
+                            <span class="text-xs font-bold opacity-70">Width (px)</span>
+                            <input type="number" id="targetWidth" placeholder="Auto" min="1" class="neu-input w-full p-3 rounded-xl font-bold text-center" oninput="resetProcessBtn()">
+                        </div>
+                        <div class="flex-1 flex flex-col gap-2">
+                            <span class="text-xs font-bold opacity-70">Height (px)</span>
+                            <input type="number" id="targetHeight" placeholder="Auto" min="1" class="neu-input w-full p-3 rounded-xl font-bold text-center" oninput="resetProcessBtn()">
+                        </div>
+                    </div>
+
+                    <div id="percentInputs" class="hidden flex-col gap-2 mt-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-bold opacity-70">Scale Relative to Crop</span>
+                            <span id="percentBadge" class="font-extrabold text-blue-500 text-lg">100%</span>
+                        </div>
+                        <input type="range" id="targetPercent" min="10" max="200" step="1" value="100" class="w-full accent-blue-500 mt-2 cursor-pointer neu-pressed h-4 rounded-full appearance-none" oninput="$('percentBadge').textContent = this.value + '%'; resetProcessBtn();">
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <label class="font-bold text-sm uppercase opacity-80 flex justify-between">
+                        <span>Max File Size Target (KB)</span>
+                        <span class="text-xs opacity-60 normal-case">(Optional)</span>
+                    </label>
+                    <input type="number" id="targetKB" placeholder="e.g. 100" min="1" class="neu-input w-full p-4 rounded-xl font-bold text-lg" oninput="toggleFormatWarning(); resetProcessBtn();">
+                    
+                    <div id="pngWarningBanner" class="hidden p-4 mt-2 text-sm font-bold text-orange-600 dark:text-orange-400 rounded-xl neu-pressed leading-relaxed transition-all duration-300">
+                        ⚠️ Target size compression works best with JPEG/WebP. Since PNG is a lossless format, it may not reach the exact target size, but we will optimize it as much as possible.
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <label class="font-bold text-sm uppercase opacity-80">Export Format</label>
+                    <div class="flex flex-wrap gap-2 sm:gap-4 segmented-control">
+                        <input type="radio" name="format" id="fmtJpg" value="jpeg" checked onchange="toggleFormatWarning(); resetProcessBtn();">
+                        <label for="fmtJpg" class="grow basis-[28%] md:basis-0 flex-1 text-center py-3 rounded-xl font-bold text-sm sm:text-base">JPG</label>
+                        
+                        <input type="radio" name="format" id="fmtWebp" value="webp" onchange="toggleFormatWarning(); resetProcessBtn();">
+                        <label for="fmtWebp" class="grow basis-[28%] md:basis-0 flex-1 text-center py-3 rounded-xl font-bold text-sm sm:text-base">WEBP</label>
+                        
+                        <input type="radio" name="format" id="fmtPdf" value="pdf" onchange="toggleFormatWarning(); resetProcessBtn();">
+                        <label for="fmtPdf" class="grow basis-[28%] md:basis-0 flex-1 text-center py-3 rounded-xl font-bold text-sm sm:text-base">PDF</label>
+
+                        <input type="radio" name="format" id="fmtPng" value="png" onchange="toggleFormatWarning(); resetProcessBtn();">
+                        <label for="fmtPng" class="grow basis-[45%] md:basis-0 flex-1 text-center py-3 rounded-xl font-bold text-sm sm:text-base">PNG</label>
+
+                        <input type="radio" name="format" id="fmtAvif" value="avif" onchange="toggleFormatWarning(); resetProcessBtn();">
+                        <label for="fmtAvif" class="grow basis-[45%] md:basis-0 flex-1 text-center py-3 rounded-xl font-bold text-sm sm:text-base">AVIF</label>
+                    </div>
+                </div>
+
+                <label for="aiEnhanceToggle" id="aiEnhanceLabel" class="flex items-center justify-between p-4 neu-pressed rounded-xl mt-1 cursor-pointer group select-none transition-all duration-300">
+                    <div class="flex flex-col">
+                        <span class="font-bold text-sm uppercase group-hover:text-blue-500 transition-colors">JetImage Enhancer (🌟)</span>
+                        <span class="text-[10px] opacity-70">Boost sharpness, contrast & color</span>
+                    </div>
+                    <div class="relative flex-shrink-0">
+                        <input type="checkbox" id="aiEnhanceToggle" class="sr-only peer" onchange="resetProcessBtn();">
+                        <div class="w-11 h-6 bg-gray-400/40 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-500 shadow-inner"></div>
+                    </div>
+                </label>
+
+                <button id="processBtn" onclick="processAndDownloadBatch()" class="neu-btn-accent w-full py-5 rounded-xl text-xl font-extrabold mt-2 flex items-center justify-center gap-3 shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all" style="background-color: #3b82f6;">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>Click Here to Generate and Process</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- LOWER WORKSPACE: Results -->
+    <section id="processedSection" class="hidden flex-col gap-8 max-w-[1600px] mx-auto w-full p-6 lg:p-10 mt-6 lg:mt-12 neu-pressed border border-gray-400/10 shadow-inner z-0 rounded-[2.5rem]" style="background-color: var(--bg-output);">
+        <div class="flex justify-between items-end border-b border-gray-400/20 pb-4 px-2">
+            <div>
+                <h2 class="text-3xl font-black text-blue-500 tracking-wide flex items-center gap-3">
+                    <i class="fa-solid fa-circle-check"></i> Output Ready
+                </h2>
+                <p class="text-sm opacity-70 mt-1 font-bold">Review your final processed quality and sizes below.</p>
+            </div>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="neu-btn px-5 py-2.5 rounded-xl font-bold text-sm text-gray-500 hover:text-blue-500 transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-arrow-up"></i> Back to Editor
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <div class="lg:col-span-8 flex flex-col gap-6" id="processedLeftPanel">
+                <div class="neu-box-output relative p-4 border-[2px] border-green-500/30 shadow-[0_0_25px_rgba(34,197,94,0.1)] rounded-[1.5rem] flex flex-col items-center justify-center min-h-[400px] md:min-h-[500px] overflow-hidden">
+                    <div id="lowerCounter" class="hidden absolute left-4 top-4 z-20 neu-pressed px-4 py-1.5 rounded-full text-green-500 font-extrabold text-sm shadow-sm">1 / 5</div>
+
+                    <button id="lowerPrevImgBtn" onclick="navigateProcessedImage(-1)" class="hidden absolute left-1 md:left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full neu-btn flex items-center justify-center z-20 hover:text-green-500 transition-all opacity-80 hover:opacity-100 shadow-lg">
+                        <i class="fa-solid fa-chevron-left text-sm md:text-lg font-bold"></i>
+                    </button>
+                    <button id="lowerNextImgBtn" onclick="navigateProcessedImage(1)" class="hidden absolute right-1 md:right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full neu-btn flex items-center justify-center z-20 hover:text-green-500 transition-all opacity-80 hover:opacity-100 shadow-lg">
+                        <i class="fa-solid fa-chevron-right text-sm md:text-lg font-bold"></i>
+                    </button>
+
+                    <div class="flex-1 w-full flex items-center justify-center rounded-xl p-2 relative" id="processedPreviewWrapper">
+                        <img id="processedPreviewImg" src="" alt="Final Processed Output" class="max-h-[380px] md:max-h-[480px] max-w-full object-contain drop-shadow-2xl transition-all duration-300">
+                        <div id="processedPdfBadge" class="hidden absolute top-4 right-4 z-30 flex items-center justify-center gap-2 bg-red-500/90 backdrop-blur-md text-white px-4 py-2 rounded-xl font-black text-sm tracking-widest shadow-xl uppercase border border-red-400/30 transition-all">
+                            <i class="fa-solid fa-file-pdf text-lg"></i> PDF Document
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-black/5 dark:bg-white/5 p-4 rounded-2xl border border-gray-400/10">
+                    <div class="flex items-center gap-6">
+                        <div class="flex flex-col">
+                            <span class="text-[11px] uppercase font-bold opacity-60">Final Name</span>
+                            <strong class="text-sm truncate max-w-[150px]" id="processedFileName">image.jpg</strong>
+                        </div>
+                        <div class="h-8 w-px bg-gray-400/20"></div>
+                        <div class="flex flex-col">
+                            <span class="text-[11px] uppercase font-bold opacity-60">Final Size</span>
+                            <strong class="text-green-500 text-lg" id="processedFileSize">45 KB</strong>
+                        </div>
+                    </div>
+                    <button id="downloadSingleBtn" class="neu-btn px-6 py-3 rounded-xl font-extrabold text-green-600 hover:text-green-500 active:scale-95 transition-all flex items-center gap-3 w-full sm:w-auto justify-center">
+                        <i class="fa-solid fa-download"></i> Download Image
+                    </button>
+                </div>
+
+                <div class="flex items-center gap-4 overflow-x-auto p-5 neu-box-output hide-scrollbar rounded-2xl" id="processedMiniGalleryStrip"></div>
+            </div>
+
+            <div class="lg:col-span-4 flex flex-col justify-end pb-4" id="processedRightPanel">
+                <div class="neu-box-output p-8 flex flex-col items-center text-center gap-4">
+                    <div class="w-20 h-20 rounded-full neu-pressed flex items-center justify-center text-4xl text-green-500 mb-2">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-2xl font-extrabold">ImgJetX Batch Download</h3>
+                    <p class="text-sm opacity-70 font-bold mb-4">All <span id="finalTotalCount" class="text-green-500">0</span> images have been successfully processed in turbo mode.</p>
+                    
+                    <button id="downloadZipBtn" onclick="triggerMasterZipDownload()" class="w-full py-5 rounded-xl text-xl font-extrabold flex items-center justify-center gap-3 bg-green-500 text-white shadow-[5px_5px_10px_#a3b1c6,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#121824,-5px_-5px_10px_#2a3a52] hover:bg-green-600 active:shadow-[inset_5px_5px_10px_#16a34a,inset_-5px_-5px_10px_#4ade80] transition-all">
+                        <i class="fa-solid fa-file-zipper"></i>
+                        <span>Download Everything (ZIP)</span>
+                    </button>
+                    
+                    <button id="downloadIndividualPdfZipBtn" onclick="triggerIndividualPdfZipDownload()" class="hidden w-full py-4 rounded-xl text-lg font-extrabold items-center justify-center gap-3 bg-red-400 text-white shadow-[5px_5px_10px_#a3b1c6,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#121824,-5px_-5px_10px_#2a3a52] hover:bg-red-500 active:shadow-[inset_5px_5px_10px_#b91c1c,inset_-5px_-5px_10px_#ef4444] transition-all">
+                        <i class="fa-solid fa-file-zipper"></i>
+                        <span>Download Individual PDFs (ZIP)</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. CROP MODAL ADVANCED -->
+    <div id="cropModal" class="fixed inset-0 z-50 backdrop-blur-md bg-black/80 hidden flex-col items-center justify-center p-4 transition-opacity">
+        <div class="neu-box w-full max-w-5xl max-h-[95vh] flex flex-col overflow-hidden shadow-2xl shadow-black/40 border border-gray-500/20">
+            <div class="p-5 flex justify-between items-center border-b border-gray-400/20 bg-white/5">
+                <h3 class="text-xl font-extrabold"><i class="fa-solid fa-crop-simple text-blue-500 mr-2"></i>Advanced Crop Workspace</h3>
+                <button onclick="closeCropModal()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-red-500 hover:text-white transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="flex-1 min-h-[40vh] md:min-h-[45vh] bg-black/10 relative w-full overflow-hidden flex items-center justify-center">
+                <img id="cropperImage" src="" alt="Workspace" class="block max-w-full max-h-full">
+            </div>
+            
+            <div class="p-6 flex flex-col gap-5 bg-white/5 overflow-y-auto w-full max-w-3xl mx-auto">
+                <div class="flex flex-col gap-2 w-full">
+                    <label class="text-xs font-bold opacity-70 uppercase tracking-wide">Select Aspect Ratio Preset</label>
+                    <select id="cropRatioSelect" class="neu-input p-4 rounded-xl w-full font-extrabold text-sm cursor-pointer outline-none transition-all shadow-inner" onchange="handleCropDropdownChange(this)">
+                        <option value="NaN" selected>Freedom (Free Crop) [Default]</option>
+                        <option value="0.7777777777777778">Passport Size Photo (3.5:4.5)</option>
+                        <option value="4">Signature (4:1)</option>
+                        <option value="0.7072135785007072">A4 Page Document (1:1.414)</option>
+                        <option value="1.7777777777777777">YouTube Thumbnail (16:9)</option>
+                        <option value="1">Instagram Post / Profile (1:1)</option>
+                        <option value="0.5625">Instagram Reels / Shorts (9:16)</option>
+                        <option value="1.7777777777777777">Facebook Cover Photo (16:9)</option>
+                        <option value="0.6666666666666666">Pinterest Pin (2:3)</option>
+                        <option value="2.3333333333333335">Blogger/Website Banner (21:9)</option>
+                        <option value="1.91">Blog Feature Image (1.91:1)</option>
+                        <option value="1">E-commerce Product Fit (1:1)</option>
+                        <option value="0.6666666666666666">Standard Photo Print 4x6 (2:3)</option>
+                        <option value="0.7142857142857143">Standard Photo Print 5x7 (5:7)</option>
+                    </select>
+                </div>
+                
+                <div class="flex flex-col gap-2 w-full">
+                    <label class="text-xs font-bold opacity-70 uppercase tracking-wide">Manual Dimensions (px)</label>
+                    <div class="flex gap-3">
+                        <input type="number" id="manualCropW" placeholder="Width (W)" class="neu-input p-4 rounded-xl w-1/2 font-extrabold text-center transition-all shadow-inner" oninput="handleManualCropInput()">
+                        <input type="number" id="manualCropH" placeholder="Height (H)" class="neu-input p-4 rounded-xl w-1/2 font-extrabold text-center transition-all shadow-inner" oninput="handleManualCropInput()">
+                    </div>
+                </div>
+
+                <div class="flex gap-4 w-full mt-2 pt-4 border-t border-gray-400/20">
+                    <button onclick="closeCropModal()" class="neu-btn flex-1 md:flex-none px-6 py-4 rounded-xl font-bold text-gray-500 hover:text-red-500 transition-colors">Cancel</button>
+                    <button onclick="applyCropBounds()" class="neu-btn-accent flex-[2] md:flex-1 px-6 py-4 rounded-xl font-extrabold text-lg shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all">Apply Crop Bounds</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. ROTATOR DEDICATED POPUP -->
+    <div id="rotateModal" class="fixed inset-0 z-50 backdrop-blur-md bg-black/80 hidden flex-col items-center justify-center p-4 transition-opacity">
+        <div class="neu-box w-full max-w-4xl max-h-[95vh] flex flex-col overflow-hidden shadow-2xl shadow-black/60 border border-gray-500/20 bg-white dark:bg-[#1e293b]">
+            <div class="p-5 flex justify-between items-center border-b border-gray-400/20 bg-white/5">
+                <h3 class="text-xl font-extrabold"><i class="fa-solid fa-rotate text-blue-500 mr-2"></i>Rotate & Flip Image</h3>
+                <button onclick="closeRotateModal()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-red-500 hover:text-white transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="flex-1 min-h-[40vh] md:min-h-[50vh] bg-black/5 relative w-full overflow-hidden flex items-center justify-center p-6">
+                <img id="rotatePreviewImg" src="" alt="Rotate Preview" class="max-w-full max-h-full object-contain drop-shadow-xl transition-transform duration-75">
+            </div>
+            
+            <div class="p-6 flex flex-col gap-6 bg-white/5 w-full max-w-2xl mx-auto">
+                <div class="flex flex-col gap-3">
+                    <div class="flex justify-between items-center px-1">
+                        <span class="text-xs font-bold uppercase opacity-70 tracking-wide">Smooth Rotation Dialer</span>
+                        <span id="rotateDegreeDisplay" class="text-blue-500 font-black text-lg">0°</span>
+                    </div>
+                    <input type="range" id="rotateSlider" min="0" max="360" value="0" class="w-full accent-blue-500 h-3 rounded-full appearance-none bg-black/10 dark:bg-white/10 outline-none cursor-pointer shadow-inner" oninput="handleRotateSlider(this.value)">
+                </div>
+                
+                <div class="flex justify-between sm:justify-center gap-3 sm:gap-8 w-full">
+                    <button onclick="handleRotateAction('left')" class="neu-btn w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex flex-col items-center justify-center gap-1 hover:text-blue-500 active:scale-95 transition-all" title="Rotate Left -90°">
+                        <i class="fa-solid fa-rotate-left text-xl sm:text-2xl"></i>
+                        <span class="text-[9px] sm:text-[11px] font-extrabold uppercase">Left</span>
+                    </button>
+                    <button onclick="handleRotateAction('right')" class="neu-btn w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex flex-col items-center justify-center gap-1 hover:text-blue-500 active:scale-95 transition-all" title="Rotate Right +90°">
+                        <i class="fa-solid fa-rotate-right text-xl sm:text-2xl"></i>
+                        <span class="text-[9px] sm:text-[11px] font-extrabold uppercase">Right</span>
+                    </button>
+                    <button onclick="handleRotateAction('flip-h')" class="neu-btn w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex flex-col items-center justify-center gap-1 hover:text-blue-500 active:scale-95 transition-all" title="Flip Horizontal">
+                        <i class="fa-solid fa-arrows-left-right text-xl sm:text-2xl"></i>
+                        <span class="text-[9px] sm:text-[11px] font-extrabold uppercase">Flip H</span>
+                    </button>
+                    <button onclick="handleRotateAction('flip-v')" class="neu-btn w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex flex-col items-center justify-center gap-1 hover:text-blue-500 active:scale-95 transition-all" title="Flip Vertical">
+                        <i class="fa-solid fa-arrows-up-down text-xl sm:text-2xl"></i>
+                        <span class="text-[9px] sm:text-[11px] font-extrabold uppercase">Flip V</span>
+                    </button>
+                </div>
+                
+                <div class="flex gap-4 w-full mt-2 pt-4 border-t border-gray-400/20">
+                    <button onclick="closeRotateModal()" class="neu-btn flex-1 md:flex-none px-6 py-4 rounded-xl font-bold text-gray-500 hover:text-red-500 transition-colors">Cancel/Close</button>
+                    <button onclick="applyRotateChanges()" class="neu-btn-accent flex-[2] md:flex-1 px-6 py-4 rounded-xl font-extrabold text-lg shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all">Apply/Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- APPLICATION LOGIC -->
+    <script>
+        const $ = id => document.getElementById(id);
+        
+        let state = [], activeId = null, cropper = null, currentEditingId = null;
+        let tempTransform = { rotate: 0, scaleX: 1, scaleY: 1 };
+        let processedFilesCache = [], activeProcessedIndex = 0;
+        let isManualInput = false;
+        const MAX_IMAGES = 10; 
+
+        document.onclick = e => {
+            if (!e.target.closest('#infoToggleBtn') && !e.target.closest('#metaPopup')) $('metaPopup')?.classList.add('hidden');
+        };
+
+        function resetProcessBtn() {
+            const btn = $('processBtn');
+            if(btn) {
+                btn.style.backgroundColor = '#3b82f6'; 
+                btn.innerHTML = `<i class="fa-solid fa-microchip"></i> <span>Click Here to Generate and Process</span>`;
+            }
+        }
+
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            $('themeToggle').querySelector('i').className = isDark ? 'fas fa-sun text-yellow-400' : 'fas fa-moon';
+        }
+
+        function toggleResizeMode(v) {
+            if (v === 'pixel') {
+                $('pixelInputs').classList.remove('hidden');
+                $('pixelInputs').classList.add('flex');
+                $('percentInputs').classList.remove('flex');
+                $('percentInputs').classList.add('hidden');
+            } else {
+                $('percentInputs').classList.remove('hidden');
+                $('percentInputs').classList.add('flex');
+                $('pixelInputs').classList.remove('flex');
+                $('pixelInputs').classList.add('hidden');
+            }
+        }
+
+        function toggleFormatWarning() {
+            const f = document.querySelector('input[name="format"]:checked')?.value || 'jpeg';
+            $('pngWarningBanner').classList.toggle('hidden', !(f === 'png' && $('targetKB').value.trim() !== ''));
+        }
+
+        function ingestFiles(el) { handleFiles(el.files); el.value = ''; }
+
+        function handleFiles(files) {
+            if (!files || !files.length) return;
+            const availableSlots = MAX_IMAGES - state.length;
+            if (availableSlots <= 0) return alert(`Limit ${MAX_IMAGES} images.`);
+            const toProcess = Array.from(files).slice(0, availableSlots);
+            if (files.length > availableSlots) alert(`Added ${availableSlots} file(s). Maximum is ${MAX_IMAGES}.`);
+            
+            $('processedSection').classList.add('hidden');
+            $('processedSection').style.display = '';
+            processedFilesCache = [];
+
+            Promise.all(toProcess.map(file => {
+                if (!file.type.startsWith('image/')) return Promise.resolve();
+                return new Promise(resolve => {
+                    const reader = new FileReader();
+                    reader.onload = e => {
+                        const img = new Image();
+                        img.onload = () => {
+                            const sizeStr = file.size > 1048576 ? (file.size/1048576).toFixed(2) + ' MB' : (file.size/1024).toFixed(1) + ' KB';
+                            resolve({
+                                id: 'img_' + Date.now() + '_' + Math.random().toString(36).substr(2,9) + '_' + Math.random().toString(36).substr(2,5),
+                                file, name: file.name, originalSrc: e.target.result, thumbnailSrc: e.target.result,
+                                cropData: null, transform: { rotate: 0, scaleX: 1, scaleY: 1 },
+                                meta: { width: img.width, height: img.height, size: sizeStr, format: file.name.split('.').pop().toUpperCase() }
+                            });
+                        };
+                        img.src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                });
+            })).then(results => {
+                const valid = results.filter(i => i);
+                state.push(...valid);
+                if (!activeId && valid.length) activeId = valid[0].id;
+                renderWorkspace();
+                resetProcessBtn();
+            });
+        }
+
+        function navigateActiveImage(dir) {
+            if (state.length <= 1) return;
+            let n = state.findIndex(i => i.id === activeId) + dir;
+            activeId = state[n < 0 ? state.length - 1 : n >= state.length ? 0 : n].id;
+            renderWorkspace();
+        }
+
+        function renderWorkspace() {
+            if (!state.length) {
+                activeId = null;
+                $('dropZone').classList.remove('hidden');
+                $('activeWorkspace').classList.replace('flex', 'hidden');
+                $('globalPanel').classList.add('opacity-40', 'pointer-events-none');
+                return;
+            }
+
+            const activeItem = state.find(i => i.id === activeId) || state[0];
+            activeId = activeItem.id;
+            const activeIndex = state.indexOf(activeItem);
+
+            $('dropZone').classList.add('hidden');
+            $('activeWorkspace').classList.replace('hidden', 'flex');
+            $('globalPanel').classList.remove('opacity-40', 'pointer-events-none');
+            $('queueCount').textContent = state.length;
+
+            const hasMul = state.length > 1;
+            $('upperCounter').classList.toggle('hidden', !hasMul);
+            $('prevImgBtn').classList.toggle('hidden', !hasMul);
+            $('nextImgBtn').classList.toggle('hidden', !hasMul);
+            if (hasMul) $('upperCounter').textContent = `${activeIndex + 1} / ${state.length}`;
+
+            $('activePreviewImg').src = activeItem.thumbnailSrc;
+            $('metaName').textContent = activeItem.name;
+            $('metaFormat').textContent = activeItem.meta.format;
+            $('metaSize').textContent = `${activeItem.meta.width} x ${activeItem.meta.height} px`;
+            $('metaWeight').textContent = activeItem.meta.size;
+
+            const edgeFull = state.length >= MAX_IMAGES;
+            $('edgeFileBtnContainer').classList.toggle('hidden', edgeFull);
+            $('edgeFileBtnContainer').classList.toggle('md:flex', !edgeFull);
+
+            let sHtml = '';
+            state.forEach(item => {
+                const isAct = item.id === activeId;
+                sHtml += `
+                    <div onclick="activeId='${item.id}'; renderWorkspace()" class="w-20 h-20 min-w-[5rem] rounded-xl relative cursor-pointer flex items-center justify-center overflow-hidden transition-all duration-300 ${isAct ? 'border-[3px] border-blue-500 shadow-[0_0_12px_rgba(59,130,246,0.5)] scale-105' : 'neu-box hover:scale-105 opacity-80 hover:opacity-100'}">
+                        <img src="${item.thumbnailSrc}" class="max-w-full max-h-full object-contain p-1 rounded-xl">
+                        <button onclick="event.stopPropagation(); removeImage('${item.id}')" class="absolute top-1 right-1 w-5 h-5 bg-red-500/90 hover:bg-red-500 text-white rounded-full flex items-center justify-center z-10 shadow-sm transition-transform scale-90 hover:scale-110">
+                            <i class="fa-solid fa-xmark text-[10px] font-bold"></i>
+                        </button>
+                    </div>`;
+            });
+            if (!edgeFull) {
+                sHtml += `
+                    <label class="w-20 h-20 min-w-[5rem] rounded-xl neu-btn flex flex-col items-center justify-center cursor-pointer text-blue-500 hover:text-blue-600 transition-colors group opacity-90 hover:opacity-100">
+                        <input type="file" multiple accept="image/*" class="hidden" onchange="ingestFiles(this)">
+                        <i class="fa-solid fa-plus text-2xl group-hover:scale-125 transition-transform"></i>
+                    </label>`;
+            }
+            $('miniGalleryStrip').innerHTML = sHtml;
+        }
+
+        function removeImage(id) {
+            state = state.filter(i => i.id !== id);
+            if (activeId === id) activeId = state.length ? state[0].id : null;
+            renderWorkspace();
+            resetProcessBtn();
+        }
+
+        function clearQueue() { 
+            state = []; activeId = null; 
+            $('processedSection').classList.add('hidden');
+            $('processedSection').style.display = '';
+            processedFilesCache = []; renderWorkspace(); resetProcessBtn(); 
+        }
+
+        function getTransformedCanvas(img, item) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const t = item.transform || { rotate: 0, scaleX: 1, scaleY: 1 };
+            const c = item.cropData;
+
+            const cropCanvas = document.createElement('canvas');
+            const cCtx = cropCanvas.getContext('2d');
+            if (c) {
+                cropCanvas.width = c.width; 
+                cropCanvas.height = c.height;
+                cCtx.drawImage(img, c.x, c.y, c.width, c.height, 0, 0, c.width, c.height);
+            } else {
+                cropCanvas.width = img.width; 
+                cropCanvas.height = img.height;
+                cCtx.drawImage(img, 0, 0);
+            }
+
+            const rad = t.rotate * Math.PI / 180;
+            const sin = Math.abs(Math.sin(rad));
+            const cos = Math.abs(Math.cos(rad));
+            const newW = cropCanvas.width * cos + cropCanvas.height * sin;
+            const newH = cropCanvas.width * sin + cropCanvas.height * cos;
+
+            canvas.width = newW; 
+            canvas.height = newH;
+            
+            ctx.translate(newW / 2, newH / 2);
+            ctx.rotate(rad);
+            ctx.scale(t.scaleX, t.scaleY);
+            ctx.translate(-cropCanvas.width / 2, -cropCanvas.height / 2);
+            ctx.drawImage(cropCanvas, 0, 0);
+
+            return canvas;
+        }
+
+        function updateBakedState(item) {
+            return new Promise(resolve => {
+                const img = new Image();
+                img.onload = () => {
+                    const canvas = getTransformedCanvas(img, item);
+                    let tw = canvas.width, th = canvas.height;
+                    if (tw > 600 || th > 600) { const r = Math.min(600/tw, 600/th); tw *= r; th *= r; }
+                    const tCanvas = document.createElement('canvas');
+                    tCanvas.width = tw; tCanvas.height = th;
+                    const ctx = tCanvas.getContext('2d', { willReadFrequently: true });
+                    ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = "high";
+                    ctx.drawImage(canvas, 0, 0, tw, th);
+                    item.thumbnailSrc = tCanvas.toDataURL('image/jpeg', 0.8); 
+                    resolve();
+                };
+                img.src = item.originalSrc;
+            });
+        }
+
+        function syncCropInputsWithCropper() {
+            if (isManualInput || !cropper) return;
+            const data = cropper.getData(true);
+            $('manualCropW').value = Math.round(data.width);
+            $('manualCropH').value = Math.round(data.height);
+        }
+
+        function handleCropDropdownChange(select) {
+            if (!cropper) return;
+            cropper.setAspectRatio(parseFloat(select.value));
+        }
+
+        function handleManualCropInput() {
+            isManualInput = true;
+            const w = parseFloat($('manualCropW').value);
+            const h = parseFloat($('manualCropH').value);
+            
+            if (!isNaN(w) && !isNaN(h) && w > 0 && h > 0) {
+                if (cropper) {
+                    cropper.setAspectRatio(w / h);
+                    const cData = cropper.getData();
+                    cropper.setData({ width: w, height: h, x: cData.x, y: cData.y });
+                }
+                $('cropRatioSelect').value = "NaN";
+            }
+            setTimeout(() => isManualInput = false, 50);
+        }
+
+        function openActiveCrop() {
+            if (!activeId) return;
+            currentEditingId = activeId;
+            const item = state.find(i => i.id === activeId);
+            
+            $('cropRatioSelect').value = "NaN";
+            $('cropperImage').src = item.originalSrc;
+            $('cropModal').classList.replace('hidden', 'flex');
+
+            if (cropper) cropper.destroy();
+            cropper = new Cropper($('cropperImage'), {
+                viewMode: 2, autoCropArea: 0.9, background: false, checkOrientation: false, 
+                ready() {
+                    cropper.rotateTo(item.transform.rotate);
+                    cropper.scale(item.transform.scaleX, item.transform.scaleY);
+                    if (item.cropData) cropper.setData(item.cropData);
+                    syncCropInputsWithCropper();
+                },
+                crop() { syncCropInputsWithCropper(); }
+            });
+        }
+
+        function closeCropModal() {
+            $('cropModal').classList.replace('flex', 'hidden');
+            if (cropper) { cropper.destroy(); cropper = null; }
+            currentEditingId = null; $('cropperImage').src = '';
+        }
+
+        async function applyCropBounds() {
+            if (!cropper || !currentEditingId) return;
+            const item = state.find(i => i.id === currentEditingId);
+            item.cropData = cropper.getData(true); 
+            await updateBakedState(item);
+            renderWorkspace();
+            resetProcessBtn();
+            closeCropModal();
+        }
+
+        function openRotateModal() {
+            if (!activeId) return;
+            currentEditingId = activeId;
+            const item = state.find(i => i.id === activeId);
+            
+            tempTransform = { ...item.transform };
+            
+            const img = new Image();
+            img.onload = () => {
+                const tempCanvas = document.createElement('canvas');
+                const tCtx = tempCanvas.getContext('2d');
+                if (item.cropData) {
+                    const c = item.cropData;
+                    tempCanvas.width = c.width; tempCanvas.height = c.height;
+                    tCtx.drawImage(img, c.x, c.y, c.width, c.height, 0, 0, c.width, c.height);
+                } else {
+                    tempCanvas.width = img.width; tempCanvas.height = img.height;
+                    tCtx.drawImage(img, 0, 0);
+                }
+                $('rotatePreviewImg').src = tempCanvas.toDataURL('image/jpeg', 0.9);
+                updateRotatePreview();
+                $('rotateModal').classList.replace('hidden', 'flex');
+            };
+            img.src = item.originalSrc;
+        }
+
+        function closeRotateModal() {
+            $('rotateModal').classList.replace('flex', 'hidden');
+            currentEditingId = null;
+        }
+
+        function updateRotatePreview() {
+            $('rotatePreviewImg').style.transform = `rotate(${tempTransform.rotate}deg) scale(${tempTransform.scaleX}, ${tempTransform.scaleY})`;
+            $('rotateSlider').value = (tempTransform.rotate % 360 + 360) % 360;
+            $('rotateDegreeDisplay').textContent = `${tempTransform.rotate}°`;
+        }
+
+        function handleRotateSlider(val) {
+            tempTransform.rotate = parseInt(val);
+            updateRotatePreview();
+        }
+
+        function handleRotateAction(action) {
+            if (action === 'left') tempTransform.rotate = (tempTransform.rotate - 90 + 360) % 360;
+            else if (action === 'right') tempTransform.rotate = (tempTransform.rotate + 90) % 360;
+            else if (action === 'flip-h') tempTransform.scaleX *= -1;
+            else if (action === 'flip-v') tempTransform.scaleY *= -1;
+            updateRotatePreview();
+        }
+
+        async function applyRotateChanges() {
+            if (!currentEditingId) return;
+            const item = state.find(i => i.id === currentEditingId);
+            item.transform = { ...tempTransform };
+            await updateBakedState(item);
+            renderWorkspace();
+            resetProcessBtn();
+            closeRotateModal();
+        }
+
+        function toggleProcessingUI(disabled) {
+            ['processBtn', 'clearQueueBtn', 'aiEnhanceToggle'].forEach(id => {
+                if($(id)) $(id).disabled = disabled;
+            });
+            $('aiEnhanceLabel').classList.toggle('opacity-50', disabled);
+            $('aiEnhanceLabel').classList.toggle('pointer-events-none', disabled);
+        }
+
+        const applyNaturalHDR = (canvas) => {
+            const ctx = canvas.getContext('2d', { willReadFrequently: true });
+            const w = canvas.width, h = canvas.height;
+            const imgData = ctx.getImageData(0, 0, w, h);
+            const data = imgData.data, cw = w * 4;
+            for (let y = 1; y < h - 1; y++) {
+                for (let x = 1; x < w - 1; x++) {
+                    const i = y * cw + x * 4;
+                    if (data[i+3] > 0) {
+                        let r = data[i], g = data[i+1], b = data[i+2];
+                        const luma = 0.299 * r + 0.587 * g + 0.114 * b;
+                        const maxC = Math.max(r, g, b), minC = Math.min(r, g, b);
+                        const saturation = maxC === 0 ? 0 : (maxC - minC) / maxC;
+                        const vBoost = 1.05 + (1.0 - saturation) * 0.1; 
+                        r = luma + (r - luma) * vBoost; g = luma + (g - luma) * vBoost; b = luma + (b - luma) * vBoost;
+                        if (luma < 90) { const lift = (90 - luma) * 0.2; r += lift; g += lift; b += lift; }
+                        else if (luma > 210) { const compress = (luma - 210) * 0.15; r -= compress; g -= compress; b -= compress; }
+                        const up = data[i - cw + 1], down = data[i + cw + 1], left = data[i - 4 + 1], right = data[i + 4 + 1], currentG = data[i + 1];
+                        const delta = Math.abs(currentG - up) + Math.abs(currentG - down) + Math.abs(currentG - left) + Math.abs(currentG - right);
+                        if (delta > 30 && delta < 150) {
+                            let s_r = (data[i] * 5) - data[i - cw] - data[i + cw] - data[i - 4] - data[i + 4];
+                            let s_g = (data[i+1] * 5) - up - down - left - right;
+                            let s_b = (data[i+2] * 5) - data[i - cw + 2] - data[i + cw + 2] - data[i - 4 + 2] - data[i + 4 + 2];
+                            r = r * 0.7 + s_r * 0.3; g = g * 0.7 + s_g * 0.3; b = b * 0.7 + s_b * 0.3;
+                        }
+                        data[i] = r < 0 ? 0 : r > 255 ? 255 : r;
+                        data[i+1] = g < 0 ? 0 : g > 255 ? 255 : g;
+                        data[i+2] = b < 0 ? 0 : b > 255 ? 255 : b;
+                    }
+                }
+            }
+            ctx.putImageData(imgData, 0, 0);
+        };
+
+        function createDownscaledCanvas(sourceCanv, w, h, bgFill) {
+            const finalCanv = document.createElement('canvas');
+            finalCanv.width = w; finalCanv.height = h;
+            const fCtx = finalCanv.getContext('2d', { willReadFrequently: true });
+            if (bgFill) { fCtx.fillStyle = '#ffffff'; fCtx.fillRect(0, 0, w, h); }
+            fCtx.imageSmoothingEnabled = true; 
+            fCtx.imageSmoothingQuality = "high";
+            fCtx.drawImage(sourceCanv, 0, 0, w, h);
+            return finalCanv;
+        }
+
+        async function processSingleImage(item, params) {
+            return new Promise(resolve => {
+                const img = new Image();
+                img.onload = async () => {
+                    await new Promise(r => setTimeout(r, 0)); 
+                    const baseCanvas = getTransformedCanvas(img, item);
+                    let { width: sW, height: sH } = baseCanvas;
+                    let dW = sW, dH = sH;
+
+                    if (params.resizeMode === 'pixel') {
+                        const tW = params.globalTWidth, tH = params.globalTHeight;
+                        if (tW && tH) { const ratio = Math.min(tW/sW, tH/sH); dW = Math.round(sW*ratio); dH = Math.round(sH*ratio); }
+                        else if (tW) { dW = tW; dH = Math.round(sH*(tW/sW)); }
+                        else if (tH) { dH = tH; dW = Math.round(sW*(tH/sH)); }
+                    } else {
+                        const pct = params.globalPercent / 100; dW = Math.round(sW*pct); dH = Math.round(sH*pct);
+                    }
+
+                    let predictiveScale = 1.0;
+                    if (params.targetKB > 0 && item.file?.size) {
+                        const originalKB = item.file.size / 1024;
+                        if (params.targetKB < originalKB) predictiveScale = Math.sqrt(params.targetKB / originalKB);
+                    }
+
+                    const targetW = Math.max(1, Math.round(dW * predictiveScale));
+                    const targetH = Math.max(1, Math.round(dH * predictiveScale));
+                    const isPDF = params.format === 'pdf';
+                    
+                    const bakedCanvas = createDownscaledCanvas(baseCanvas, targetW, targetH, (params.format === 'jpeg' || isPDF));
+                    
+                    if (params.aiEnhance) {
+                        await new Promise(r => setTimeout(r, 0)); 
+                        applyNaturalHDR(bakedCanvas);
+                    }
+
+                    const mime = params.format === 'webp' ? 'image/webp' : 
+                                 (params.format === 'png' ? 'image/png' : 
+                                 (params.format === 'avif' ? 'image/avif' : 'image/jpeg'));
+
+                    const getBlob = q => new Promise(res => {
+                        bakedCanvas.toBlob(blob => {
+                            if (params.format === 'avif' && (!blob || blob.type !== 'image/avif')) {
+                                bakedCanvas.toBlob(fbBlob => res(fbBlob), 'image/webp', q);
+                            } else {
+                                res(blob);
+                            }
+                        }, mime, q);
+                    });
+
+                    let finalBlob = await getBlob(params.format === 'png' ? 1.0 : 0.92);
+
+                    if (params.targetKB > 0 && params.format !== 'png' && !isPDF) {
+                        const targetBytes = params.targetKB * 1024;
+                        let minQ = 0.01, maxQ = 1.0, currentQ;
+                        let bestBlob = finalBlob;
+                        let bestDiff = targetBytes - finalBlob.size;
+                        
+                        if (!(bestDiff >= 0 && finalBlob.size >= targetBytes * 0.95)) {
+                            for (let i = 0; i < 12; i++) {
+                                currentQ = (minQ + maxQ) / 2;
+                                let tBlob = await getBlob(currentQ);
+                                let diff = targetBytes - tBlob.size;
+                                
+                                if (diff >= 0) { 
+                                    if (bestDiff < 0 || diff < bestDiff) { bestDiff = diff; bestBlob = tBlob; }
+                                    if (tBlob.size >= targetBytes * 0.95 && tBlob.size <= targetBytes) { bestBlob = tBlob; break; }
+                                    minQ = currentQ; 
+                                } else {
+                                    maxQ = currentQ;
+                                    if (bestDiff < 0 && tBlob.size < bestBlob.size) { bestBlob = tBlob; bestDiff = diff; }
+                                }
+                            }
+                        }
+                        finalBlob = bestBlob;
+                    }
+
+                    if (isPDF) {
+                        const generatePdfFromBlob = (blob) => {
+                            return new Promise(res => {
+                                const r = new FileReader();
+                                r.onloadend = () => {
+                                    const pdf = new jspdf.jsPDF({ orientation: targetW > targetH ? 'l' : 'p', unit: 'px', format: [targetW, targetH] });
+                                    pdf.addImage(r.result, 'JPEG', 0, 0, targetW, targetH);
+                                    const out = pdf.output('blob');
+                                    // Store PDF metadata directly on the blob for later retrieval
+                                    out._pdfImageData = r.result; 
+                                    out._pdfW = targetW; 
+                                    out._pdfH = targetH;
+                                    res({ out, size: out.size });
+                                };
+                                r.readAsDataURL(blob);
+                            });
+                        };
+
+                        if (params.targetKB > 0) {
+                            const targetBytes = params.targetKB * 1024;
+                            let minQ = 0.35, maxQ = 1.0, currentQ, bestPdfOut = null, bestValidDiff = -1, smallestInvalidOut = null;
+
+                            let initialPdf = await generatePdfFromBlob(finalBlob);
+                            let initialDiff = targetBytes - initialPdf.size;
+                            
+                            if (initialDiff >= 0 && initialPdf.size >= targetBytes * 0.90 && initialPdf.size <= targetBytes * 0.99) {
+                                return resolve(initialPdf.out);
+                            } else if (initialDiff >= 0) {
+                                bestValidDiff = initialDiff; bestPdfOut = initialPdf.out;
+                            } else {
+                                smallestInvalidOut = initialPdf.out;
+                            }
+
+                            for (let i = 0; i < 8; i++) {
+                                currentQ = (minQ + maxQ) / 2;
+                                let tempJpegBlob = await getBlob(currentQ);
+                                let { out, size } = await generatePdfFromBlob(tempJpegBlob);
+                                let diff = targetBytes - size;
+                                
+                                if (diff >= 0) {
+                                    if (bestValidDiff === -1 || diff < bestValidDiff) { bestValidDiff = diff; bestPdfOut = out; }
+                                    if (size >= targetBytes * 0.90 && size <= targetBytes * 0.99) { bestPdfOut = out; break; }
+                                    minQ = currentQ; 
+                                } else {
+                                    maxQ = currentQ; 
+                                    if (!smallestInvalidOut || size < smallestInvalidOut.size) smallestInvalidOut = out;
+                                }
+                            }
+                            resolve(bestPdfOut || smallestInvalidOut);
+                        } else {
+                            let pdfObj = await generatePdfFromBlob(finalBlob);
+                            resolve(pdfObj.out);
+                        }
+                    } else {
+                        resolve(finalBlob);
+                    }
+                };
+                img.src = item.originalSrc;
+            });
+        }
+
+        async function processAndDownloadBatch() {
+            if (!state.length) return;
+            toggleProcessingUI(true);
+            
+            const btn = $('processBtn');
+            btn.style.backgroundColor = '#3b82f6';
+            
+            const formatNode = document.querySelector('input[name="format"]:checked');
+            const format = formatNode ? formatNode.value : 'jpeg';
+            const resizeMode = document.querySelector('input[name="resizeMode"]:checked').value;
+            const targetKB = parseInt($('targetKB').value) || 0;
+            const globalTWidth = parseInt($('targetWidth').value) || null;
+            const globalTHeight = parseInt($('targetHeight').value) || null;
+            const globalPercent = parseInt($('targetPercent').value) || 100;
+            const aiEnhance = $('aiEnhanceToggle').checked;
+
+            processedFilesCache.forEach(file => { if (file.previewUrl) URL.revokeObjectURL(file.previewUrl); });
+            processedFilesCache = [];
+
+            let processedCount = 0;
+            btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> <span>0 of ${state.length} Processing...</span>`;
+
+            await new Promise(r => setTimeout(r, 10));
+
+            const processPromises = state.map(async (item, index) => {
+                const finalBlob = await processSingleImage(item, { format, resizeMode, targetKB, globalTWidth, globalTHeight, globalPercent, aiEnhance });
+                
+                let ext = 'jpg';
+                if (format === 'pdf') { ext = 'pdf'; } 
+                else if (finalBlob.type === 'image/webp') { ext = 'webp'; } 
+                else if (finalBlob.type === 'image/avif') { ext = 'avif'; } 
+                else if (finalBlob.type === 'image/png') { ext = 'png'; }
+                
+                let baseName = item.name.substring(0, item.name.lastIndexOf('.')) || item.name;
+                
+                processedCount++;
+                btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> <span>${processedCount} of ${state.length} Processing...</span>`;
+
+                return {
+                    name: `${baseName}_processed.${ext}`, blob: finalBlob, ext,
+                    originalSizeStr: item.meta.size, newSizeKB: (finalBlob.size / 1024).toFixed(1) + ' KB',
+                    previewUrl: URL.createObjectURL(finalBlob), originalThumb: item.thumbnailSrc,
+                    originalIndex: index 
+                };
+            });
+
+            const results = await Promise.all(processPromises);
+            
+            processedFilesCache = results.sort((a, b) => a.originalIndex - b.originalIndex);
+
+            toggleProcessingUI(false);
+            btn.style.backgroundColor = '#22c55e';
+            btn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Process and Generate Successful ✓</span>`;
+            
+            activeProcessedIndex = 0;
+            $('finalTotalCount').textContent = processedFilesCache.length;
+            $('processedSection').classList.remove('hidden');
+            $('processedSection').style.display = 'flex';
+            renderProcessedWorkspace();
+            setTimeout(() => $('processedSection').scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+        }
+
+        function navigateProcessedImage(dir) {
+            if (processedFilesCache.length <= 1) return;
+            activeProcessedIndex += dir;
+            if (activeProcessedIndex < 0) activeProcessedIndex = processedFilesCache.length - 1;
+            if (activeProcessedIndex >= processedFilesCache.length) activeProcessedIndex = 0;
+            renderProcessedWorkspace();
+        }
+
+        function updateOutputUI(isPdf, title, size) {
+            const zBtn = $('downloadZipBtn'), sBtn = $('downloadSingleBtn'), indBtn = $('downloadIndividualPdfZipBtn');
+            const hasMultiple = processedFilesCache.length > 1;
+
+            if (isPdf && hasMultiple) {
+                zBtn.innerHTML = `<i class="fa-solid fa-file-pdf"></i><span>Combined PDF (All-in-One)</span>`;
+                zBtn.className = `w-full py-5 rounded-xl text-xl font-extrabold flex items-center justify-center gap-3 text-white transition-all shadow-[5px_5px_10px_#a3b1c6,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#121824,-5px_-5px_10px_#2a3a52] bg-red-500 hover:bg-red-600 active:shadow-[inset_5px_5px_10px_#b91c1c,inset_-5px_-5px_10px_#ef4444]`;
+                if (indBtn) { 
+                    indBtn.innerHTML = `<i class="fa-solid fa-file-zipper"></i><span>Download Individual PDFs (ZIP)</span>`;
+                    indBtn.classList.remove('hidden'); indBtn.classList.add('flex'); 
+                }
+            } else if (isPdf) {
+                zBtn.innerHTML = `<i class="fa-solid fa-file-pdf"></i><span>Download PDF</span>`;
+                zBtn.className = `w-full py-5 rounded-xl text-xl font-extrabold flex items-center justify-center gap-3 text-white transition-all shadow-[5px_5px_10px_#a3b1c6,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#121824,-5px_-5px_10px_#2a3a52] bg-red-500 hover:bg-red-600 active:shadow-[inset_5px_5px_10px_#b91c1c,inset_-5px_-5px_10px_#ef4444]`;
+                if (indBtn) { indBtn.classList.add('hidden'); indBtn.classList.remove('flex'); }
+            } else {
+                zBtn.innerHTML = `<i class="fa-solid fa-file-zipper"></i><span>Download Everything (ZIP)</span>`;
+                zBtn.className = `w-full py-5 rounded-xl text-xl font-extrabold flex items-center justify-center gap-3 text-white transition-all shadow-[5px_5px_10px_#a3b1c6,-5px_-5px_10px_#ffffff] dark:shadow-[5px_5px_10px_#121824,-5px_-5px_10px_#2a3a52] bg-green-500 hover:bg-green-600 active:shadow-[inset_5px_5px_10px_#16a34a,inset_-5px_-5px_10px_#4ade80]`;
+                if (indBtn) { indBtn.classList.add('hidden'); indBtn.classList.remove('flex'); }
+            }
+            
+            sBtn.innerHTML = isPdf ? `<i class="fa-solid fa-file-pdf"></i> Download PDF` : `<i class="fa-solid fa-download"></i> Download Image`;
+            sBtn.className = `neu-btn px-6 py-3 rounded-xl font-extrabold active:scale-95 transition-all flex items-center gap-3 w-full sm:w-auto justify-center ${isPdf ? 'text-red-600 hover:text-red-500' : 'text-green-600 hover:text-green-500'}`;
+            
+            $('processedPdfBadge').classList.toggle('hidden', !isPdf);
+            $('processedPdfBadge').classList.toggle('flex', isPdf);
+            $('processedPreviewImg').className = isPdf ? 'opacity-90 drop-shadow-2xl border-4 border-white dark:border-gray-800 max-h-[380px] md:max-h-[480px] max-w-full object-contain transition-all' : 'max-h-[380px] md:max-h-[480px] max-w-full object-contain drop-shadow-2xl transition-all duration-300';
+            
+            $('processedFileName').textContent = title;
+            $('processedFileSize').textContent = size;
+        }
+
+        function renderProcessedWorkspace() {
+            if (!processedFilesCache.length) return;
+            const file = processedFilesCache[activeProcessedIndex];
+            const isPdf = file.ext === 'pdf';
+
+            $('processedLeftPanel').classList.replace(processedFilesCache.length === 1 ? 'lg:col-span-8' : 'lg:col-span-12', processedFilesCache.length === 1 ? 'lg:col-span-12' : 'lg:col-span-8');
+            $('processedRightPanel').classList.toggle('hidden', processedFilesCache.length === 1);
+
+            const hasMul = processedFilesCache.length > 1;
+            $('lowerPrevImgBtn').classList.toggle('hidden', !hasMul);
+            $('lowerNextImgBtn').classList.toggle('hidden', !hasMul);
+            $('lowerCounter').classList.toggle('hidden', !hasMul);
+            if (hasMul) $('lowerCounter').textContent = `${activeProcessedIndex + 1} / ${processedFilesCache.length}`;
+
+            $('processedPreviewImg').src = isPdf ? file.originalThumb : file.previewUrl;
+            updateOutputUI(isPdf, file.name, file.newSizeKB);
+
+            $('downloadSingleBtn').onclick = () => {
+                const a = document.createElement('a'); a.href = file.previewUrl; a.download = file.name;
+                document.body.appendChild(a); a.click(); document.body.removeChild(a);
+            };
+
+            let pHtml = '';
+            processedFilesCache.forEach((f, idx) => {
+                const isAct = idx === activeProcessedIndex;
+                const imgUrl = f.ext === 'pdf' ? f.originalThumb : f.previewUrl;
+                pHtml += `
+                    <div onclick="activeProcessedIndex=${idx}; renderProcessedWorkspace()" class="w-20 h-20 min-w-[5rem] rounded-xl relative cursor-pointer flex items-center justify-center overflow-hidden transition-all duration-300 ${isAct ? 'border-[3px] border-green-500 shadow-[0_0_12px_rgba(34,197,94,0.4)] scale-105' : 'neu-box hover:scale-105 opacity-80 hover:opacity-100'}">
+                        <img src="${imgUrl}" class="max-w-full max-h-full object-contain p-1 rounded-xl">
+                        ${f.ext === 'pdf' ? `<div class="absolute top-1 right-1 bg-red-500/90 backdrop-blur-sm text-white text-[9px] font-extrabold px-1.5 py-0.5 rounded shadow-sm z-10 border border-red-400/30">PDF</div>` : ''}
+                    </div>`;
+            });
+            $('processedMiniGalleryStrip').innerHTML = pHtml;
+        }
+
+        async function triggerMasterZipDownload() {
+            if (!processedFilesCache.length) return;
+            const isPdf = processedFilesCache[0].ext === 'pdf';
+            const btn = $('downloadZipBtn');
+            
+            const oldHtml = btn.innerHTML;
+            btn.innerHTML = isPdf ? `<i class="fa-solid fa-spinner fa-spin"></i> Compiling PDF...` : `<i class="fa-solid fa-spinner fa-spin"></i> Compiling ZIP...`;
+
+            if (isPdf) {
+                setTimeout(() => {
+                    let pdf = null;
+                    processedFilesCache.forEach((f, index) => {
+                        const { _pdfW: w = 800, _pdfH: h = 1131, _pdfImageData: img } = f.blob;
+                        const o = w > h ? 'l' : 'p';
+                        if (index === 0) { 
+                            pdf = new jspdf.jsPDF({ orientation: o, unit: 'px', format: [w, h] }); 
+                            pdf.addImage(img, 'JPEG', 0, 0, w, h); 
+                        } else { 
+                            pdf.addPage([w, h], o); 
+                            pdf.addImage(img, 'JPEG', 0, 0, w, h); 
+                        }
+                    });
+                    pdf.save(`ImgJetX_Combined_${Date.now()}.pdf`);
+                    btn.innerHTML = oldHtml;
+                }, 100);
+                return;
+            }
+
+            const zip = new JSZip();
+            processedFilesCache.forEach(f => zip.file(f.name, f.blob));
+            const zipBlob = await zip.generateAsync({ type: 'blob' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(zipBlob);
+            a.download = `ImgJetX_Final_${Date.now()}.zip`;
+            document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(a.href);
+            
+            btn.innerHTML = oldHtml;
+        }
+
+        async function triggerIndividualPdfZipDownload() {
+            if (!processedFilesCache.length) return;
+            const btn = $('downloadIndividualPdfZipBtn');
+            const oldHtml = btn.innerHTML;
+            btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Compiling Individual PDFs...`;
+
+            setTimeout(async () => {
+                try {
+                    const zip = new JSZip();
+                    processedFilesCache.forEach(f => {
+                        const { _pdfW: w = 800, _pdfH: h = 1131, _pdfImageData: img } = f.blob;
+                        const o = w > h ? 'l' : 'p';
+                        const pdf = new jspdf.jsPDF({ orientation: o, unit: 'px', format: [w, h] }); 
+                        pdf.addImage(img, 'JPEG', 0, 0, w, h);
+                        const pdfBlob = pdf.output('blob');
+                        
+                        let fName = f.name;
+                        if (!fName.toLowerCase().endsWith('.pdf')) {
+                            fName = fName.substring(0, fName.lastIndexOf('.')) + '.pdf';
+                        }
+                        zip.file(fName, pdfBlob);
+                    });
+                    
+                    const zipBlob = await zip.generateAsync({ type: 'blob' });
+                    const a = document.createElement('a');
+                    a.href = URL.createObjectURL(zipBlob);
+                    a.download = `ImgJetX_Individual_PDFs_${Date.now()}.zip`;
+                    document.body.appendChild(a); 
+                    a.click(); 
+                    document.body.removeChild(a); 
+                    URL.revokeObjectURL(a.href);
+                } catch (err) {
+                    console.error("ZIP Generation Error", err);
+                }
+                btn.innerHTML = oldHtml;
+            }, 100);
+        }
+    </script>
+</body>
+</html>
