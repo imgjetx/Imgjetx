@@ -95,7 +95,13 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <!-- ✅ PERF: Async font load - non-blocking -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap"></noscript>
+    
+    <!-- ✅ PERF: DNS prefetch for CDN domains -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -113,11 +119,15 @@
         }
     </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- ✅ PERF: Font Awesome async - non-blocking -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <!-- ✅ PERF: Cropper CSS async - only needed when crop modal opens -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css"></noscript>
+    <!-- ✅ PERF: Cropper JS deferred - only needed when crop modal opens -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <!-- jszip & jspdf removed from head - lazy loaded on demand -->
 
     <style>
         :root{--bg-color:#e0e5ec;--text-color:#334155;--shadow-outer:9px 9px 16px #a3b1c6,-9px -9px 16px #ffffff;--shadow-inner:inset 6px 6px 12px #a3b1c6,inset -6px -6px 12px #ffffff;--input-inner:inset 4px 4px 8px #a3b1c6,inset -4px -4px 8px #ffffff;--accent-shadow:5px 5px 10px #a3b1c6,-5px -5px 10px #ffffff;--accent-inner:inset 5px 5px 10px #2563eb,inset -5px -5px 10px #60a5fa;--bg-output:#d8dee6}
@@ -171,7 +181,15 @@
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                 </div>
                 <h2 class="text-2xl font-extrabold mb-2 text-center">Drag & Drop Images Here</h2>
-                <p class="text-sm opacity-70 text-center">Supports JPG, PNG, WEBP, HEIC (Max 10 Images)</p>
+                <p class="text-sm opacity-70 text-center mb-5">Supports JPG, PNG, WEBP, HEIC (Max 10 Images)</p>
+                <!-- ✅ UX: Clear value proposition to increase engagement time -->
+                <div class="flex flex-wrap justify-center gap-3 mt-2 pointer-events-none select-none">
+                    <span class="px-3 py-1.5 rounded-full text-xs font-extrabold bg-blue-500/10 text-blue-500 border border-blue-400/30">✅ 100% Free</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs font-extrabold bg-blue-500/10 text-blue-500 border border-blue-400/30">🔒 No Upload to Server</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs font-extrabold bg-blue-500/10 text-blue-500 border border-blue-400/30">⚡ Works Instantly</span>
+                    <span class="px-3 py-1.5 rounded-full text-xs font-extrabold bg-blue-500/10 text-blue-500 border border-blue-400/30">🚫 No Signup</span>
+                </div>
+                <p class="text-xs opacity-50 mt-5 font-bold text-center">Compress • Resize • Crop • Rotate • Convert to PDF/WEBP/AVIF</p>
             </label>
 
             <div id="activeWorkspace" class="hidden flex-col gap-6 w-full">
@@ -508,7 +526,19 @@
         let tempTransform = { rotate: 0, scaleX: 1, scaleY: 1 };
         let processedFilesCache = [], activeProcessedIndex = 0;
         let isManualInput = false;
-        const MAX_IMAGES = 10; 
+        const MAX_IMAGES = 10;
+
+        // ✅ PERF: Lazy script loader - only loads when needed
+        const _loadedScripts = {};
+        function loadScript(src) {
+            if (_loadedScripts[src]) return _loadedScripts[src];
+            _loadedScripts[src] = new Promise((resolve, reject) => {
+                const s = document.createElement('script');
+                s.src = src; s.onload = resolve; s.onerror = reject;
+                document.head.appendChild(s);
+            });
+            return _loadedScripts[src];
+        }
 
         document.onclick = e => {
             if (!e.target.closest('#infoToggleBtn') && !e.target.closest('#metaPopup')) $('metaPopup')?.classList.add('hidden');
@@ -975,6 +1005,8 @@
                     }
 
                     if (isPDF) {
+                        // ✅ PERF: Lazy load jsPDF only when PDF format is selected
+                        if (!window.jspdf) await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
                         const generatePdfFromBlob = (blob) => {
                             return new Promise(res => {
                                 const r = new FileReader();
@@ -1180,7 +1212,9 @@
             const oldHtml = btn.innerHTML;
             btn.innerHTML = isPdf ? `<i class="fa-solid fa-spinner fa-spin"></i> Compiling PDF...` : `<i class="fa-solid fa-spinner fa-spin"></i> Compiling ZIP...`;
 
+            // ✅ PERF: Lazy load libraries only when user clicks download
             if (isPdf) {
+                if (!window.jspdf) await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
                 setTimeout(() => {
                     let pdf = null;
                     processedFilesCache.forEach((f, index) => {
@@ -1200,6 +1234,8 @@
                 return;
             }
 
+            // ✅ PERF: Lazy load JSZip
+            if (!window.JSZip) await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js');
             const zip = new JSZip();
             processedFilesCache.forEach(f => zip.file(f.name, f.blob));
             const zipBlob = await zip.generateAsync({ type: 'blob' });
@@ -1216,6 +1252,12 @@
             const btn = $('downloadIndividualPdfZipBtn');
             const oldHtml = btn.innerHTML;
             btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Compiling Individual PDFs...`;
+
+            // ✅ PERF: Lazy load both libraries together before starting
+            await Promise.all([
+                window.JSZip ? Promise.resolve() : loadScript('https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js'),
+                window.jspdf ? Promise.resolve() : loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js')
+            ]);
 
             setTimeout(async () => {
                 try {
