@@ -22,7 +22,7 @@
     <meta name="theme-color" content="#3b82f6">
     <meta name="rating" content="general">
     <meta name="revisit-after" content="7 days">
-    <meta name="language" content="English">
+    <meta name="language" content="English, Hindi">
     <meta name="geo.region" content="IN">
     <meta name="geo.placename" content="India">
     <link rel="canonical" href="https://imgjetx.site/">
@@ -152,6 +152,12 @@
         ::-webkit-scrollbar-track{background:var(--bg-color);box-shadow:var(--input-inner);border-radius:10px}
         ::-webkit-scrollbar-thumb{background:#3b82f6;border-radius:10px}
         .cropper-face,.cropper-view-box{border-radius:4px}
+        
+        /* ✅ NEW: AI Enhancer Glow Animation */
+        .ai-glow {
+            box-shadow: var(--shadow-inner), 0 0 15px rgba(59,130,246,0.6) !important;
+            border-color: rgba(59,130,246,0.5) !important;
+        }
     </style>
 </head>
 <body class="min-h-screen pb-12 font-sans tracking-wide flex flex-col">
@@ -182,7 +188,6 @@
                 </div>
                 <h2 class="text-2xl font-extrabold mb-2 text-center">Drag & Drop Images Here</h2>
                 <p class="text-sm opacity-70 text-center mb-5">Supports JPG, PNG, WEBP, HEIC (Max 10 Images)</p>
-                <!-- ✅ UX: Clear value proposition to increase engagement time -->
                 <div class="flex flex-wrap justify-center gap-3 mt-2 pointer-events-none select-none">
                     <span class="px-3 py-1.5 rounded-full text-xs font-extrabold bg-blue-500/10 text-blue-500 border border-blue-400/30">✅ 100% Free</span>
                     <span class="px-3 py-1.5 rounded-full text-xs font-extrabold bg-blue-500/10 text-blue-500 border border-blue-400/30">🔒 No Upload to Server</span>
@@ -323,9 +328,19 @@
                     </div>
                 </div>
 
-                <label for="aiEnhanceToggle" id="aiEnhanceLabel" class="flex items-center justify-between p-4 neu-pressed rounded-xl mt-1 cursor-pointer group select-none transition-all duration-300">
+                <!-- ✅ UPDATED UI: Advanced JetImage Enhancer with Tooltip and Glow effects -->
+                <label for="aiEnhanceToggle" id="aiEnhanceLabel" class="flex items-center justify-between p-4 neu-pressed rounded-xl mt-1 cursor-pointer group select-none transition-all duration-300 relative border border-transparent">
                     <div class="flex flex-col">
-                        <span class="font-bold text-sm uppercase group-hover:text-blue-500 transition-colors">JetImage Enhancer (🌟)</span>
+                        <span class="font-bold text-sm uppercase group-hover:text-blue-500 transition-colors flex items-center gap-2">
+                            JetImage Enhancer (🌟)
+                            <div class="relative group/tooltip inline-block">
+                                <i class="fa-solid fa-circle-question text-gray-400 hover:text-blue-500 transition-colors text-xs"></i>
+                                <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 bg-gray-800 text-white text-[11px] rounded shadow-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity pointer-events-none z-50 normal-case font-normal text-center leading-tight">
+                                    Boosts sharpness, contrast, and color vibrancy using a custom local HDR algorithm.
+                                    <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-800"></div>
+                                </div>
+                            </div>
+                        </span>
                         <span class="text-[10px] opacity-70">Boost sharpness, contrast & color</span>
                     </div>
                     <div class="relative flex-shrink-0">
@@ -368,8 +383,31 @@
                         <i class="fa-solid fa-chevron-right text-sm md:text-lg font-bold"></i>
                     </button>
 
+                    <!-- ✅ NEW: Interactive Before/After Image Slider Container with Tightly Bounded Inline Grid -->
                     <div class="flex-1 w-full flex items-center justify-center rounded-xl p-2 relative" id="processedPreviewWrapper">
-                        <img id="processedPreviewImg" src="" alt="Final Processed Output" class="max-h-[380px] md:max-h-[480px] max-w-full object-contain drop-shadow-2xl transition-all duration-300">
+                        <div id="comparisonContainer" class="relative inline-grid place-items-center max-w-full max-h-[380px] md:max-h-[480px]">
+                            
+                            <!-- Badges -->
+                            <div id="beforeBadge" class="absolute top-2 left-2 bg-black/60 text-white text-[10px] px-2 py-1 rounded backdrop-blur-sm pointer-events-none z-10 font-bold uppercase tracking-wider hidden">Before</div>
+                            <div id="afterBadge" class="absolute top-2 right-2 bg-black/60 text-white text-[10px] px-2 py-1 rounded backdrop-blur-sm pointer-events-none z-10 font-bold uppercase tracking-wider hidden">After</div>
+
+                            <!-- After Image (Bottom Layer) -->
+                            <img id="processedPreviewImg" src="" alt="Final Processed Output" class="max-h-[380px] md:max-h-[480px] max-w-full object-contain block drop-shadow-2xl transition-all duration-300" style="grid-area: 1 / 1;">
+                            
+                            <!-- Before Image (Top Layer - Clipped) -->
+                            <img id="processedPreviewBefore" src="" alt="Original Preview" class="max-h-[380px] md:max-h-[480px] max-w-full object-contain block drop-shadow-2xl transition-none pointer-events-none" style="grid-area: 1 / 1; clip-path: inset(0 50% 0 0);">
+                            
+                            <!-- Slider Handle UI -->
+                            <div id="sliderHandle" class="absolute top-0 bottom-0 left-[50%] w-0.5 md:w-1 bg-white pointer-events-none shadow-[0_0_10px_rgba(0,0,0,0.5)] z-20 flex items-center justify-center -translate-x-1/2">
+                                <div class="w-6 h-6 md:w-8 md:h-8 bg-white rounded-full flex items-center justify-center text-gray-800 shadow-md border border-gray-200">
+                                    <i class="fa-solid fa-arrows-left-right text-[10px] md:text-xs"></i>
+                                </div>
+                            </div>
+
+                            <!-- Invisible HTML Range Input -->
+                            <input type="range" id="compareSlider" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" oninput="updateComparisonSlider(this.value)">
+                        </div>
+
                         <div id="processedPdfBadge" class="hidden absolute top-4 right-4 z-30 flex items-center justify-center gap-2 bg-red-500/90 backdrop-blur-md text-white px-4 py-2 rounded-xl font-black text-sm tracking-widest shadow-xl uppercase border border-red-400/30 transition-all">
                             <i class="fa-solid fa-file-pdf text-lg"></i> PDF Document
                         </div>
@@ -521,6 +559,7 @@
     <!-- APPLICATION LOGIC -->
     <script>
         const $ = id => document.getElementById(id);
+        const delay = ms => new Promise(res => setTimeout(res, ms));
         
         let state = [], activeId = null, cropper = null, currentEditingId = null;
         let tempTransform = { rotate: 0, scaleX: 1, scaleY: 1 };
@@ -549,6 +588,13 @@
             if(btn) {
                 btn.style.backgroundColor = '#3b82f6'; 
                 btn.innerHTML = `<i class="fa-solid fa-microchip"></i> <span>Click Here to Generate and Process</span>`;
+            }
+            
+            // Toggle AI Enhancer Glow Animation dynamically
+            const aiToggle = $('aiEnhanceToggle');
+            if(aiToggle && $('aiEnhanceLabel')) {
+                if(aiToggle.checked) $('aiEnhanceLabel').classList.add('ai-glow');
+                else $('aiEnhanceLabel').classList.remove('ai-glow');
             }
         }
 
@@ -581,9 +627,27 @@
 
         function handleFiles(files) {
             if (!files || !files.length) return;
+            
+            // NEW: File Input Validation - Single File
+            for (let i = 0; i < files.length; i++) {
+                if (files[i].size > 30 * 1024 * 1024) {
+                    alert("❌ Single file size cannot exceed 30MB. Please remove the large file.");
+                    return;
+                }
+            }
+
             const availableSlots = MAX_IMAGES - state.length;
             if (availableSlots <= 0) return alert(`Limit ${MAX_IMAGES} images.`);
             const toProcess = Array.from(files).slice(0, availableSlots);
+            
+            // NEW: File Input Validation - Cumulative Batch Size
+            const currentStateSize = state.reduce((acc, item) => acc + (item.file ? item.file.size : 0), 0);
+            const incomingSize = toProcess.reduce((acc, file) => acc + file.size, 0);
+            if ((currentStateSize + incomingSize) > 300 * 1024 * 1024) {
+                alert("❌ Total batch size cannot exceed 300MB to prevent browser crashes. Please reduce your file queue.");
+                return;
+            }
+
             if (files.length > availableSlots) alert(`Added ${availableSlots} file(s). Maximum is ${MAX_IMAGES}.`);
             
             $('processedSection').classList.add('hidden');
@@ -1005,7 +1069,6 @@
                     }
 
                     if (isPDF) {
-                        // ✅ PERF: Lazy load jsPDF only when PDF format is selected
                         if (!window.jspdf) await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
                         const generatePdfFromBlob = (blob) => {
                             return new Promise(res => {
@@ -1014,7 +1077,6 @@
                                     const pdf = new jspdf.jsPDF({ orientation: targetW > targetH ? 'l' : 'p', unit: 'px', format: [targetW, targetH] });
                                     pdf.addImage(r.result, 'JPEG', 0, 0, targetW, targetH);
                                     const out = pdf.output('blob');
-                                    // Store PDF metadata directly on the blob for later retrieval
                                     out._pdfImageData = r.result; 
                                     out._pdfW = targetW; 
                                     out._pdfH = targetH;
@@ -1069,6 +1131,21 @@
 
         async function processAndDownloadBatch() {
             if (!state.length) return;
+            
+            // NEW: Custom threshold routing logic
+            const totalMB = state.reduce((acc, item) => acc + (item.file ? item.file.size : 0), 0) / (1024 * 1024);
+            
+            if (totalMB > 300) {
+                alert("❌ Total batch size cannot exceed 300MB to prevent browser crashes. Please reduce your file queue.");
+                return;
+            }
+
+            let showWarning = false;
+            if (totalMB > 150 && totalMB <= 300) {
+                showWarning = true;
+                alert("⚠️ Large batch size detected (Over 150MB). Processing all images simultaneously. Please do not close the browser tab until finished.");
+            }
+
             toggleProcessingUI(true);
             
             const btn = $('processBtn');
@@ -1086,12 +1163,33 @@
             processedFilesCache.forEach(file => { if (file.previewUrl) URL.revokeObjectURL(file.previewUrl); });
             processedFilesCache = [];
 
-            let processedCount = 0;
-            btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> <span>0 of ${state.length} Processing...</span>`;
+            // ✅ Dynamic UI Animation Configuration
+            const steps = [
+                "Initializing core graphics processor...",
+                "Analyzing and mapping image pixels...",
+                "Applying lossless compression algorithms..."
+            ];
+            if (aiEnhance) steps.push("JetImage AI Enhancer refining details...");
+            steps.push("Packing and securing generated files...");
 
-            await new Promise(r => setTimeout(r, 10));
+            const numImages = state.length;
+            // Scale dynamically: 1 image ~1.5s, 5 images ~6.5s, 10 images ~12.7s
+            const totalTargetDuration = 1500 + (numImages - 1) * 1250; 
+            const stepDelay = Math.round(totalTargetDuration / steps.length);
 
-            const processPromises = state.map(async (item, index) => {
+            // 1. UI Animation Promise (Non-blocking visual sequence)
+            const uiAnimationPromise = (async () => {
+                for (let text of steps) {
+                    btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> <span>${text}</span>`;
+                    await delay(stepDelay);
+                }
+            })();
+
+            // 2. Parallel Processing Promise (Actual heavy lifting done simultaneously)
+            const processingPromise = Promise.all(state.map(async (item, index) => {
+                // Yield thread briefly to allow UI to update
+                await delay(10);
+                
                 const finalBlob = await processSingleImage(item, { format, resizeMode, targetKB, globalTWidth, globalTHeight, globalPercent, aiEnhance });
                 
                 let ext = 'jpg';
@@ -1102,21 +1200,21 @@
                 
                 let baseName = item.name.substring(0, item.name.lastIndexOf('.')) || item.name;
                 
-                processedCount++;
-                btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> <span>${processedCount} of ${state.length} Processing...</span>`;
-
                 return {
                     name: `${baseName}_processed.${ext}`, blob: finalBlob, ext,
                     originalSizeStr: item.meta.size, newSizeKB: (finalBlob.size / 1024).toFixed(1) + ' KB',
                     previewUrl: URL.createObjectURL(finalBlob), originalThumb: item.thumbnailSrc,
+                    originalSrc: item.originalSrc,
                     originalIndex: index 
                 };
-            });
+            }));
 
-            const results = await Promise.all(processPromises);
+            // ✅ Wait for both background processing and UI text sequence to finish
+            const [results] = await Promise.all([processingPromise, uiAnimationPromise]);
             
             processedFilesCache = results.sort((a, b) => a.originalIndex - b.originalIndex);
 
+            // Transition to Success State
             toggleProcessingUI(false);
             btn.style.backgroundColor = '#22c55e';
             btn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Process and Generate Successful ✓</span>`;
@@ -1127,6 +1225,16 @@
             $('processedSection').style.display = 'flex';
             renderProcessedWorkspace();
             setTimeout(() => $('processedSection').scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+        }
+
+        // ✅ Function for Interactive Comparison Slider Updates
+        function updateComparisonSlider(val) {
+            const beforeImg = $('processedPreviewBefore');
+            const handle = $('sliderHandle');
+            if (beforeImg && handle) {
+                beforeImg.style.clipPath = `inset(0 ${100 - val}% 0 0)`;
+                handle.style.left = `${val}%`;
+            }
         }
 
         function navigateProcessedImage(dir) {
@@ -1163,6 +1271,20 @@
             
             $('processedPdfBadge').classList.toggle('hidden', !isPdf);
             $('processedPdfBadge').classList.toggle('flex', isPdf);
+            
+            // Adjust slider controls visibility based on whether output is PDF
+            $('processedPreviewBefore').style.display = isPdf ? 'none' : 'block';
+            $('sliderHandle').style.display = isPdf ? 'none' : 'flex';
+            $('compareSlider').style.display = isPdf ? 'none' : 'block';
+            
+            if (isPdf) {
+                $('beforeBadge').classList.add('hidden');
+                $('afterBadge').classList.add('hidden');
+            } else {
+                $('beforeBadge').classList.remove('hidden');
+                $('afterBadge').classList.remove('hidden');
+            }
+            
             $('processedPreviewImg').className = isPdf ? 'opacity-90 drop-shadow-2xl border-4 border-white dark:border-gray-800 max-h-[380px] md:max-h-[480px] max-w-full object-contain transition-all' : 'max-h-[380px] md:max-h-[480px] max-w-full object-contain drop-shadow-2xl transition-all duration-300';
             
             $('processedFileName').textContent = title;
@@ -1183,7 +1305,14 @@
             $('lowerCounter').classList.toggle('hidden', !hasMul);
             if (hasMul) $('lowerCounter').textContent = `${activeProcessedIndex + 1} / ${processedFilesCache.length}`;
 
+            // Handle preview logic including slider resets
             $('processedPreviewImg').src = isPdf ? file.originalThumb : file.previewUrl;
+            if (!isPdf) {
+                $('processedPreviewBefore').src = file.originalSrc;
+                $('compareSlider').value = 50;
+                updateComparisonSlider(50);
+            }
+            
             updateOutputUI(isPdf, file.name, file.newSizeKB);
 
             $('downloadSingleBtn').onclick = () => {
