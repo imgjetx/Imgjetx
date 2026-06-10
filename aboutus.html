@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ImgJetX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #f0f0f0;
+            --text-color: #1a1a1a;
+            --border-color: #000000;
+            --card-bg: #ffffff;
+        }
+
+        .dark {
+            --bg-color: #121212;
+            --text-color: #f5f5f5;
+            --border-color: #ffffff;
+            --card-bg: #1e1e1e;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: system-ui, -apple-system, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Neo-brutalism premium styles matching main site */
+        .neu-box {
+            background: var(--card-bg);
+            border: 3px solid var(--border-color);
+            box-shadow: 4px 4px 0px var(--border-color);
+        }
+
+        .neu-btn {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            box-shadow: 2px 2px 0px var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        .neu-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <script src="header.js"></script>
+
+    <main class="max-w-[1000px] mx-auto px-6 py-12">
+        <div class="neu-box p-8 sm:p-12 rounded-2xl mb-12">
+            
+            <div class="border-b-4 border-current pb-6 mb-8">
+                <h1 class="text-3xl sm:text-4xl font-black tracking-tight mb-2">About Us</h1>
+                <p class="text-sm font-bold opacity-70">Welcome to ImgJetX</p>
+            </div>
+
+            <div class="mb-10">
+                <p class="text-base sm:text-lg font-bold leading-relaxed mb-4 opacity-90">
+                    ImgJetX is a free online image editing and optimization platform designed to make image processing fast, simple, and accessible for everyone.
+                </p>
+                <p class="text-base sm:text-lg font-bold leading-relaxed opacity-90 text-blue-600 dark:text-blue-400">
+                    Our mission is to provide powerful browser-based tools that help users edit, optimize, and manage images without complicated software installations or unnecessary steps.
+                </p>
+            </div>
+
+            <div class="space-y-10 text-base leading-relaxed">
+                
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-screwdriver-wrench text-blue-500"></i> What We Do
+                    </h2>
+                    <p class="font-semibold opacity-80 mb-3 pl-1">
+                        ImgJetX offers a growing collection of image tools, including:
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pl-1 font-bold">
+                        <div class="flex items-center gap-2 opacity-80"><i class="fa-solid fa-circle-check text-blue-500 text-sm"></i> Image Compression</div>
+                        <div class="flex items-center gap-2 opacity-80"><i class="fa-solid fa-circle-check text-blue-500 text-sm"></i> Image Resizing</div>
+                        <div class="flex items-center gap-2 opacity-80"><i class="fa-solid fa-circle-check text-blue-500 text-sm"></i> Image Cropping</div>
+                        <div class="flex items-center gap-2 opacity-80"><i class="fa-solid fa-circle-check text-blue-500 text-sm"></i> Image Format Conversion</div>
+                        <div class="flex items-center gap-2 opacity-80"><i class="fa-solid fa-circle-check text-blue-500 text-sm"></i> PDF and Image Utilities</div>
+                        <div class="flex items-center gap-2 opacity-80"><i class="fa-solid fa-circle-check text-blue-500 text-sm"></i> WebP, AVIF,扬, PNG Tools</div>
+                        <div class="flex items-center gap-2 opacity-80"><i class="fa-solid fa-circle-check text-blue-500 text-sm"></i> Batch Processing Tools</div>
+                        <div class="flex items-center gap-2 opacity-80"><i class="fa-solid fa-circle-check text-blue-500 text-sm"></i> Future Enhancements</div>
+                    </div>
+                    <p class="font-semibold opacity-80 mt-4 pl-1">
+                        Our goal is to continue expanding the platform with new tools and improvements while keeping the service free and easy to use.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-blue-500/10 border-2 border-dashed border-blue-500 rounded-xl">
+                    <h2 class="text-xl sm:text-2xl font-black mb-3 flex items-center gap-3 text-blue-600 dark:text-blue-400">
+                        <i class="fa-solid fa-shield-halved"></i> Privacy-First Approach
+                    </h2>
+                    <p class="font-extrabold mb-2 pl-1">
+                        At ImgJetX, privacy is one of our core priorities.
+                    </p>
+                    <p class="font-semibold opacity-90 pl-1">
+                        All image processing is performed directly within your web browser using client-side technologies. Your images are not uploaded to, processed by, or stored on our servers during normal image editing operations. This approach helps keep your files under your control while providing fast and secure image processing.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black mb-3 flex items-center gap-3">
+                        <i class="fa-solid fa-users text-blue-500"></i> Who Uses ImgJetX
+                    </h2>
+                    <p class="font-semibold opacity-80 mb-3 pl-1">
+                        ImgJetX is built for anyone who works with images, including:
+                    </p>
+                    <div class="flex flex-wrap gap-2 pl-1">
+                        <span class="px-3 py-1 bg-black/5 dark:bg-white/5 border border-current rounded-lg text-sm font-bold">Students</span>
+                        <span class="px-3 py-1 bg-black/5 dark:bg-white/5 border border-current rounded-lg text-sm font-bold">Bloggers</span>
+                        <span class="px-3 py-1 bg-black/5 dark:bg-white/5 border border-current rounded-lg text-sm font-bold">Content Creators</span>
+                        <span class="px-3 py-1 bg-black/5 dark:bg-white/5 border border-current rounded-lg text-sm font-bold">Designers</span>
+                        <span class="px-3 py-1 bg-black/5 dark:bg-white/5 border border-current rounded-lg text-sm font-bold">Developers</span>
+                        <span class="px-3 py-1 bg-black/5 dark:bg-white/5 border border-current rounded-lg text-sm font-bold">Digital Marketers</span>
+                        <span class="px-3 py-1 bg-black/5 dark:bg-white/5 border border-current rounded-lg text-sm font-bold">Business Owners</span>
+                    </div>
+                    <p class="font-semibold opacity-80 mt-3 pl-1">
+                        Whether you need to optimize a single image or process multiple files, ImgJetX aims to provide a simple and reliable solution.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black mb-3 flex items-center gap-3">
+                        <i class="fa-solid fa-eye text-blue-500"></i> Our Vision
+                    </h2>
+                    <p class="font-semibold opacity-80 pl-1">
+                        Our vision is to build a trusted global platform that offers free, fast, and user-friendly image tools for people around the world. We are committed to continuously improving the platform and adding new features that make image editing more efficient and accessible.
+                    </p>
+                </div>
+
+                <div class="p-5 bg-black/5 dark:bg-white/5 border-2 border-black dark:border-white rounded-xl">
+                    <h2 class="text-xl sm:text-2xl font-black mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-user-gear text-blue-500"></i> Created By
+                    </h2>
+                    <p class="font-extrabold text-lg pl-1">
+                        ImgJetX was created and is maintained by <span class="text-blue-500 underline">Adarsh Kumar</span>.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t-2 border-gray-400/20">
+                    <h2 class="text-xl sm:text-2xl font-black mb-3 flex items-center gap-3 text-blue-500">
+                        <i class="fa-solid fa-envelope"></i> Contact Us
+                    </h2>
+                    <p class="font-semibold opacity-80 pl-1">
+                        If you have questions, suggestions, feedback, or business inquiries, feel free to contact us:
+                    </p>
+                    <p class="mt-2 pl-1 font-extrabold text-lg text-blue-500 hover:underline">
+                        Email: <a href="mailto:imgjetx@gmail.com">imgjetx@gmail.com</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="mt-10 pt-6 border-t-4 border-current text-center">
+                <p class="font-black text-sm opacity-90 tracking-wide">
+                    Thank you for using ImgJetX.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="footer.js"></script>
+
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+    </script>
+</body>
+</html>

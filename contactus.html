@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ImgJetX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #f0f0f0;
+            --text-color: #1a1a1a;
+            --border-color: #000000;
+            --card-bg: #ffffff;
+        }
+
+        .dark {
+            --bg-color: #121212;
+            --text-color: #f5f5f5;
+            --border-color: #ffffff;
+            --card-bg: #1e1e1e;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: system-ui, -apple-system, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Neo-brutalism premium styles matching main site */
+        .neu-box {
+            background: var(--card-bg);
+            border: 3px solid var(--border-color);
+            box-shadow: 4px 4px 0px var(--border-color);
+        }
+
+        .neu-btn {
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            box-shadow: 2px 2px 0px var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        .neu-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <script src="header.js"></script>
+
+    <main class="max-w-[1000px] mx-auto px-6 py-12">
+        <div class="neu-box p-8 sm:p-12 rounded-2xl mb-12">
+            
+            <div class="border-b-4 border-current pb-6 mb-8">
+                <h1 class="text-3xl sm:text-4xl font-black tracking-tight mb-2">Contact Us</h1>
+                <p class="text-sm font-bold opacity-70">We value your feedback and support</p>
+            </div>
+
+            <p class="text-base sm:text-lg font-bold leading-relaxed mb-8 opacity-90">
+                Welcome to ImgJetX. We value feedback, suggestions, questions, and bug reports from our users. If you need assistance or would like to contact us, please use the information below.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-base leading-relaxed">
+                
+                <div class="space-y-6">
+                    <div class="p-6 bg-blue-500/10 border-2 border-black dark:border-white rounded-xl">
+                        <h2 class="text-xl font-black mb-2 flex items-center gap-2 text-blue-600 dark:text-blue-400">
+                            <i class="fa-solid fa-paper-plane"></i> Get in Touch
+                        </h2>
+                        <p class="font-extrabold text-xl mb-2">
+                            Email: <a href="mailto:imgjetx@gmail.com" class="text-blue-500 underline hover:text-blue-600">imgjetx@gmail.com</a>
+                        </p>
+                        <p class="text-sm font-bold opacity-70">
+                            We aim to respond to inquiries as soon as reasonably possible.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-xl font-black mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-clipboard-list text-blue-500"></i> Contact Reasons
+                        </h2>
+                        <p class="font-semibold opacity-80 mb-2">You may contact us regarding:</p>
+                        <ul class="list-disc pl-6 font-bold opacity-80 space-y-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-1">
+                            <li>General Questions</li>
+                            <li>Feedback and Suggestions</li>
+                            <li>Bug Reports & Website Issues</li>
+                            <li>Business Inquiries</li>
+                            <li>Feature Requests</li>
+                            <li>Privacy-Related Questions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="p-6 bg-yellow-500/10 border-2 border-dashed border-yellow-500 dark:border-yellow-400 rounded-xl">
+                        <h2 class="text-xl font-black mb-3 flex items-center gap-2 text-yellow-600 dark:text-yellow-400">
+                            <i class="fa-solid fa-circle-exclamation"></i> Before Contacting Us
+                        </h2>
+                        <p class="font-semibold opacity-90 mb-3 text-sm">
+                            To help us assist you more effectively, please include relevant details when reporting a problem, such as:
+                        </p>
+                        <ul class="list-disc pl-6 font-bold opacity-90 space-y-1 text-sm">
+                            <li>The tool you were using</li>
+                            <li>Your device and browser information</li>
+                            <li>A brief description of the issue</li>
+                            <li>Steps to reproduce the problem (if applicable)</li>
+                        </ul>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-lg font-black flex items-center gap-2">
+                                <i class="fa-solid fa-briefcase text-blue-500"></i> Business Inquiries
+                            </h3>
+                            <p class="font-semibold opacity-80 text-sm pl-7">
+                                For business-related matters, partnerships, or collaboration opportunities, please contact us via email.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-black flex items-center gap-2">
+                                <i class="fa-solid fa-shield-halved text-blue-500"></i> Privacy Questions
+                            </h3>
+                            <p class="font-semibold opacity-80 text-sm pl-7">
+                                If you have questions regarding our Privacy Policy, Terms and Conditions, or Disclaimer, please contact us using the email address provided above.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 pt-6 border-t-4 border-current text-center">
+                <p class="font-black text-sm opacity-90 tracking-wide mb-1">
+                    Thank you for using ImgJetX.
+                </p>
+                <p class="text-xs font-bold opacity-70">
+                    We appreciate your support and feedback as we continue improving our platform.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="footer.js"></script>
+
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+    </script>
+</body>
+</html>
