@@ -1,3 +1,20 @@
+// ==========================================
+// GOOGLE ANALYTICS INTEGRATION FOR ALL PAGES
+// ==========================================
+(function() {
+    var gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-6SZSFGX81K';
+    document.head.appendChild(gaScript);
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-6SZSFGX81K');
+})();
+// ==========================================
+
+
 document.write(`
     <nav class="w-full p-6 flex justify-between items-center max-w-[1600px] mx-auto relative z-50">
         <div class="flex items-center gap-4">
